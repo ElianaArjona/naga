@@ -2597,3 +2597,568 @@ File Path                                PID    Runtime      # DAGs    # Errors 
 /opt/airflow/dags/pkapi_to_kafka_dag.py                           1           0  0.07s           2025-06-07T14:23:38
 /opt/airflow/dags/kafka_producer_dag.py                           1           0  0.05s           2025-06-07T14:23:30
 ================================================================================
+[2025-06-07T15:19:34.790+0000] {manager.py:470} INFO - Processing files using up to 2 processes at a time 
+[2025-06-07T15:19:34.790+0000] {manager.py:471} INFO - Process each file at most once every 30 seconds
+[2025-06-07T15:19:34.791+0000] {manager.py:472} INFO - Checking for new files in /opt/airflow/dags every 300 seconds
+[2025-06-07T15:19:34.791+0000] {manager.py:737} INFO - Searching for files in /opt/airflow/dags
+[2025-06-07T15:19:34.794+0000] {manager.py:740} INFO - There are 2 files in /opt/airflow/dags
+[2025-06-07T15:19:34.841+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  ----------
+/opt/airflow/dags/kafka_producer_dag.py    169  0.02s             0           0
+/opt/airflow/dags/pkapi_to_kafka_dag.py    166  0.02s             0           0
+================================================================================
+[2025-06-07T15:20:05.212+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/pkapi_to_kafka_dag.py    176  0.01s             1           0  0.22s           2025-06-07T15:19:35
+/opt/airflow/dags/kafka_producer_dag.py    179  0.00s             1           0  0.21s           2025-06-07T15:19:35
+================================================================================
+[2025-06-07T15:21:24.399+0000] {manager.py:470} INFO - Processing files using up to 2 processes at a time 
+[2025-06-07T15:21:24.399+0000] {manager.py:471} INFO - Process each file at most once every 30 seconds
+[2025-06-07T15:21:24.399+0000] {manager.py:472} INFO - Checking for new files in /opt/airflow/dags every 300 seconds
+[2025-06-07T15:21:24.399+0000] {manager.py:737} INFO - Searching for files in /opt/airflow/dags
+[2025-06-07T15:21:24.403+0000] {manager.py:740} INFO - There are 2 files in /opt/airflow/dags
+[2025-06-07T15:21:24.448+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  ----------
+/opt/airflow/dags/kafka_producer_dag.py    168  0.02s             0           0
+/opt/airflow/dags/pkapi_to_kafka_dag.py    165  0.02s             0           0
+================================================================================
+[2025-06-07T15:21:44.838+0000] {manager.py:452} INFO - Exiting gracefully upon receiving signal 15
+[2025-06-07T15:22:01.417+0000] {manager.py:470} INFO - Processing files using up to 2 processes at a time 
+[2025-06-07T15:22:01.417+0000] {manager.py:471} INFO - Process each file at most once every 30 seconds
+[2025-06-07T15:22:01.417+0000] {manager.py:472} INFO - Checking for new files in /opt/airflow/dags every 300 seconds
+[2025-06-07T15:22:01.418+0000] {manager.py:737} INFO - Searching for files in /opt/airflow/dags
+[2025-06-07T15:22:01.420+0000] {manager.py:740} INFO - There are 2 files in /opt/airflow/dags
+[2025-06-07T15:22:01.466+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  ----------
+/opt/airflow/dags/kafka_producer_dag.py    169  0.02s             0           0
+/opt/airflow/dags/pkapi_to_kafka_dag.py    166  0.02s             0           0
+================================================================================
+[2025-06-07T15:22:31.666+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/pkapi_to_kafka_dag.py    176  0.01s             1           0  0.08s           2025-06-07T15:22:01
+/opt/airflow/dags/kafka_producer_dag.py    179  0.00s             1           0  0.07s           2025-06-07T15:22:01
+================================================================================
+[2025-06-07T15:23:02.058+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/pkapi_to_kafka_dag.py    186  0.01s             1           0  0.21s           2025-06-07T15:22:31
+/opt/airflow/dags/kafka_producer_dag.py    189  0.00s             1           0  0.20s           2025-06-07T15:22:31
+================================================================================
+[2025-06-07T15:23:30.310+0000] {manager.py:452} INFO - Exiting gracefully upon receiving signal 15
+[2025-06-07T15:23:52.113+0000] {manager.py:470} INFO - Processing files using up to 2 processes at a time 
+[2025-06-07T15:23:52.113+0000] {manager.py:471} INFO - Process each file at most once every 30 seconds
+[2025-06-07T15:23:52.114+0000] {manager.py:472} INFO - Checking for new files in /opt/airflow/dags every 300 seconds
+[2025-06-07T15:23:52.114+0000] {manager.py:737} INFO - Searching for files in /opt/airflow/dags
+[2025-06-07T15:23:52.117+0000] {manager.py:740} INFO - There are 2 files in /opt/airflow/dags
+[2025-06-07T15:23:52.163+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  ----------
+/opt/airflow/dags/kafka_producer_dag.py    169  0.02s             0           0
+/opt/airflow/dags/pkapi_to_kafka_dag.py    166  0.02s             0           0
+================================================================================
+[2025-06-07T15:23:53.884+0000] {manager.py:452} INFO - Exiting gracefully upon receiving signal 15
+[2025-06-07T15:24:23.793+0000] {manager.py:470} INFO - Processing files using up to 2 processes at a time 
+[2025-06-07T15:24:23.794+0000] {manager.py:471} INFO - Process each file at most once every 30 seconds
+[2025-06-07T15:24:23.794+0000] {manager.py:472} INFO - Checking for new files in /opt/airflow/dags every 300 seconds
+[2025-06-07T15:24:23.795+0000] {manager.py:737} INFO - Searching for files in /opt/airflow/dags
+[2025-06-07T15:24:23.797+0000] {manager.py:740} INFO - There are 2 files in /opt/airflow/dags
+[2025-06-07T15:24:23.847+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  ----------
+/opt/airflow/dags/kafka_producer_dag.py    169  0.02s             0           0
+/opt/airflow/dags/pkapi_to_kafka_dag.py    166  0.02s             0           0
+================================================================================
+[2025-06-07T15:24:54.191+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/pkapi_to_kafka_dag.py    176  0.01s             1           0  0.20s           2025-06-07T15:24:24
+/opt/airflow/dags/kafka_producer_dag.py    179  0.00s             1           0  0.19s           2025-06-07T15:24:24
+================================================================================
+[2025-06-07T15:25:02.196+0000] {manager.py:452} INFO - Exiting gracefully upon receiving signal 15
+[2025-06-07T15:30:54.596+0000] {manager.py:470} INFO - Processing files using up to 2 processes at a time 
+[2025-06-07T15:30:54.597+0000] {manager.py:471} INFO - Process each file at most once every 30 seconds
+[2025-06-07T15:30:54.598+0000] {manager.py:472} INFO - Checking for new files in /opt/airflow/dags every 300 seconds
+[2025-06-07T15:30:54.599+0000] {manager.py:737} INFO - Searching for files in /opt/airflow/dags
+[2025-06-07T15:30:54.601+0000] {manager.py:740} INFO - There are 2 files in /opt/airflow/dags
+[2025-06-07T15:30:54.645+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  ----------
+/opt/airflow/dags/kafka_producer_dag.py    169  0.02s             0           0
+/opt/airflow/dags/pkapi_to_kafka_dag.py    166  0.02s             0           0
+================================================================================
+[2025-06-07T15:31:25.009+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/pkapi_to_kafka_dag.py    176  0.00s             1           0  0.21s           2025-06-07T15:30:54
+/opt/airflow/dags/kafka_producer_dag.py    179  0.00s             1           0  0.20s           2025-06-07T15:30:54
+================================================================================
+[2025-06-07T15:31:55.309+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/pkapi_to_kafka_dag.py    186  0.01s             1           0  0.08s           2025-06-07T15:31:25
+/opt/airflow/dags/kafka_producer_dag.py    189  0.00s             1           0  0.07s           2025-06-07T15:31:25
+================================================================================
+[2025-06-07T15:32:24.321+0000] {manager.py:452} INFO - Exiting gracefully upon receiving signal 15
+[2025-06-07T15:33:01.932+0000] {manager.py:470} INFO - Processing files using up to 2 processes at a time 
+[2025-06-07T15:33:01.933+0000] {manager.py:471} INFO - Process each file at most once every 30 seconds
+[2025-06-07T15:33:01.933+0000] {manager.py:472} INFO - Checking for new files in /opt/airflow/dags every 300 seconds
+[2025-06-07T15:33:01.933+0000] {manager.py:737} INFO - Searching for files in /opt/airflow/dags
+[2025-06-07T15:33:01.936+0000] {manager.py:740} INFO - There are 2 files in /opt/airflow/dags
+[2025-06-07T15:33:01.984+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  ----------
+/opt/airflow/dags/kafka_producer_dag.py    168  0.02s             0           0
+/opt/airflow/dags/pkapi_to_kafka_dag.py    165  0.02s             0           0
+================================================================================
+[2025-06-07T15:33:32.354+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/pkapi_to_kafka_dag.py    175  0.01s             1           0  0.22s           2025-06-07T15:33:02
+/opt/airflow/dags/kafka_producer_dag.py    178  0.00s             1           0  0.22s           2025-06-07T15:33:02
+================================================================================
+[2025-06-07T15:34:02.618+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/kafka_producer_dag.py    187  0.00s             1           0  0.07s           2025-06-07T15:33:32
+/opt/airflow/dags/pkapi_to_kafka_dag.py    185  0.01s             1           0  0.07s           2025-06-07T15:33:32
+================================================================================
+[2025-06-07T15:34:32.819+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/pkapi_to_kafka_dag.py    207  0.01s             1           0  0.08s           2025-06-07T15:34:02
+/opt/airflow/dags/kafka_producer_dag.py    210  0.00s             1           0  0.08s           2025-06-07T15:34:02
+================================================================================
+[2025-06-07T15:35:03.104+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/pkapi_to_kafka_dag.py    223  0.01s             1           0  0.09s           2025-06-07T15:34:32
+/opt/airflow/dags/kafka_producer_dag.py    226  0.00s             1           0  0.07s           2025-06-07T15:34:32
+================================================================================
+[2025-06-07T15:35:33.369+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/pkapi_to_kafka_dag.py    233  0.00s             1           0  0.07s           2025-06-07T15:35:03
+/opt/airflow/dags/kafka_producer_dag.py    235  0.00s             1           0  0.06s           2025-06-07T15:35:03
+================================================================================
+[2025-06-07T15:36:03.655+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/pkapi_to_kafka_dag.py    249  0.01s             1           0  0.07s           2025-06-07T15:35:33
+/opt/airflow/dags/kafka_producer_dag.py    252  0.00s             1           0  0.06s           2025-06-07T15:35:33
+================================================================================
+[2025-06-07T15:36:33.919+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/pkapi_to_kafka_dag.py    259  0.02s             1           0  0.07s           2025-06-07T15:36:03
+/opt/airflow/dags/kafka_producer_dag.py    262  0.01s             1           0  0.06s           2025-06-07T15:36:03
+================================================================================
+[2025-06-07T15:37:04.238+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/pkapi_to_kafka_dag.py    275  0.01s             1           0  0.08s           2025-06-07T15:36:33
+/opt/airflow/dags/kafka_producer_dag.py    278  0.00s             1           0  0.07s           2025-06-07T15:36:33
+================================================================================
+[2025-06-07T15:37:34.539+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/pkapi_to_kafka_dag.py    285  0.01s             1           0  0.07s           2025-06-07T15:37:04
+/opt/airflow/dags/kafka_producer_dag.py    288  0.00s             1           0  0.06s           2025-06-07T15:37:04
+================================================================================
+[2025-06-07T15:38:02.843+0000] {manager.py:737} INFO - Searching for files in /opt/airflow/dags
+[2025-06-07T15:38:02.846+0000] {manager.py:740} INFO - There are 2 files in /opt/airflow/dags
+[2025-06-07T15:38:04.870+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/pkapi_to_kafka_dag.py    301  0.01s             1           0  0.08s           2025-06-07T15:37:34
+/opt/airflow/dags/kafka_producer_dag.py    304  0.00s             1           0  0.07s           2025-06-07T15:37:34
+================================================================================
+[2025-06-07T15:38:35.148+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/pkapi_to_kafka_dag.py    311  0.01s             1           0  0.07s           2025-06-07T15:38:04
+/opt/airflow/dags/kafka_producer_dag.py    314  0.00s             1           0  0.06s           2025-06-07T15:38:04
+================================================================================
+[2025-06-07T15:39:05.476+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/pkapi_to_kafka_dag.py    327  0.01s             1           0  0.08s           2025-06-07T15:38:35
+/opt/airflow/dags/kafka_producer_dag.py    330  0.00s             1           0  0.07s           2025-06-07T15:38:35
+================================================================================
+[2025-06-07T15:39:35.801+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/pkapi_to_kafka_dag.py    337  0.01s             1           0  0.06s           2025-06-07T15:39:05
+/opt/airflow/dags/kafka_producer_dag.py    340  0.00s             1           0  0.05s           2025-06-07T15:39:05
+================================================================================
+[2025-06-07T15:40:06.055+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/pkapi_to_kafka_dag.py    353  0.01s             1           0  0.08s           2025-06-07T15:39:35
+/opt/airflow/dags/kafka_producer_dag.py    356  0.00s             1           0  0.07s           2025-06-07T15:39:35
+================================================================================
+[2025-06-07T15:40:36.291+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/pkapi_to_kafka_dag.py    363  0.01s             1           0  0.06s           2025-06-07T15:40:06
+/opt/airflow/dags/kafka_producer_dag.py    366  0.00s             1           0  0.05s           2025-06-07T15:40:06
+================================================================================
+[2025-06-07T15:41:06.543+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/pkapi_to_kafka_dag.py    379  0.01s             1           0  0.07s           2025-06-07T15:40:36
+/opt/airflow/dags/kafka_producer_dag.py    382  0.00s             1           0  0.06s           2025-06-07T15:40:36
+================================================================================
+[2025-06-07T15:41:36.827+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/pkapi_to_kafka_dag.py    389  0.01s             1           0  0.07s           2025-06-07T15:41:06
+/opt/airflow/dags/kafka_producer_dag.py    392  0.00s             1           0  0.06s           2025-06-07T15:41:06
+================================================================================
+[2025-06-07T15:42:07.105+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/pkapi_to_kafka_dag.py    405  0.01s             1           0  0.07s           2025-06-07T15:41:36
+/opt/airflow/dags/kafka_producer_dag.py    408  0.00s             1           0  0.06s           2025-06-07T15:41:36
+================================================================================
+[2025-06-07T15:42:37.417+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/pkapi_to_kafka_dag.py    415  0.01s             1           0  0.07s           2025-06-07T15:42:07
+/opt/airflow/dags/kafka_producer_dag.py    418  0.00s             1           0  0.06s           2025-06-07T15:42:07
+================================================================================
+[2025-06-07T15:43:03.682+0000] {manager.py:737} INFO - Searching for files in /opt/airflow/dags
+[2025-06-07T15:43:03.687+0000] {manager.py:740} INFO - There are 2 files in /opt/airflow/dags
+[2025-06-07T15:43:07.725+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/pkapi_to_kafka_dag.py    431  0.00s             1           0  0.09s           2025-06-07T15:42:37
+/opt/airflow/dags/kafka_producer_dag.py    434  0.00s             1           0  0.07s           2025-06-07T15:42:37
+================================================================================
+[2025-06-07T15:43:38.076+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/pkapi_to_kafka_dag.py    441  0.02s             1           0  0.07s           2025-06-07T15:43:07
+/opt/airflow/dags/kafka_producer_dag.py    444  0.00s             1           0  0.06s           2025-06-07T15:43:07
+================================================================================
+[2025-06-07T15:44:08.329+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/pkapi_to_kafka_dag.py    457  0.01s             1           0  0.08s           2025-06-07T15:43:38
+/opt/airflow/dags/kafka_producer_dag.py    460  0.00s             1           0  0.07s           2025-06-07T15:43:38
+================================================================================
+[2025-06-07T15:44:38.661+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/pkapi_to_kafka_dag.py    467  0.01s             1           0  0.08s           2025-06-07T15:44:08
+/opt/airflow/dags/kafka_producer_dag.py    470  0.00s             1           0  0.06s           2025-06-07T15:44:08
+================================================================================
+[2025-06-07T15:45:08.943+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/pkapi_to_kafka_dag.py    483  0.01s             1           0  0.08s           2025-06-07T15:44:38
+/opt/airflow/dags/kafka_producer_dag.py    485  0.00s             1           0  0.07s           2025-06-07T15:44:38
+================================================================================
+[2025-06-07T15:45:39.239+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/pkapi_to_kafka_dag.py    493  0.01s             1           0  0.08s           2025-06-07T15:45:09
+/opt/airflow/dags/kafka_producer_dag.py    496  0.00s             1           0  0.07s           2025-06-07T15:45:09
+================================================================================
+[2025-06-07T15:46:09.539+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/pkapi_to_kafka_dag.py    509  0.01s             1           0  0.08s           2025-06-07T15:45:39
+/opt/airflow/dags/kafka_producer_dag.py    512  0.00s             1           0  0.07s           2025-06-07T15:45:39
+================================================================================
+[2025-06-07T15:46:39.850+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/pkapi_to_kafka_dag.py    519  0.01s             1           0  0.09s           2025-06-07T15:46:09
+/opt/airflow/dags/kafka_producer_dag.py    522  0.00s             1           0  0.07s           2025-06-07T15:46:09
+================================================================================
+[2025-06-07T15:46:44.290+0000] {manager.py:452} INFO - Exiting gracefully upon receiving signal 15
+[2025-06-07T15:47:01.879+0000] {manager.py:470} INFO - Processing files using up to 2 processes at a time 
+[2025-06-07T15:47:01.879+0000] {manager.py:471} INFO - Process each file at most once every 30 seconds
+[2025-06-07T15:47:01.879+0000] {manager.py:472} INFO - Checking for new files in /opt/airflow/dags every 300 seconds
+[2025-06-07T15:47:01.880+0000] {manager.py:737} INFO - Searching for files in /opt/airflow/dags
+[2025-06-07T15:47:01.882+0000] {manager.py:740} INFO - There are 2 files in /opt/airflow/dags
+[2025-06-07T15:47:01.926+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  ----------
+/opt/airflow/dags/kafka_producer_dag.py    168  0.02s             0           0
+/opt/airflow/dags/pkapi_to_kafka_dag.py    165  0.02s             0           0
+================================================================================
+[2025-06-07T15:47:32.140+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/pkapi_to_kafka_dag.py    182  0.01s             1           0  0.10s           2025-06-07T15:47:02
+/opt/airflow/dags/kafka_producer_dag.py    185  0.00s             1           0  0.07s           2025-06-07T15:47:01
+================================================================================
+[2025-06-07T15:48:02.560+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/pkapi_to_kafka_dag.py    198  0.01s             1           0  0.20s           2025-06-07T15:47:32
+/opt/airflow/dags/kafka_producer_dag.py    201  0.00s             1           0  0.19s           2025-06-07T15:47:32
+================================================================================
+[2025-06-07T15:48:32.797+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/pkapi_to_kafka_dag.py    208  0.01s             1           0  0.06s           2025-06-07T15:48:02
+/opt/airflow/dags/kafka_producer_dag.py    211  0.00s             1           0  0.06s           2025-06-07T15:48:02
+================================================================================
+[2025-06-07T15:49:03.072+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/kafka_producer_dag.py    227  0.00s             1           0  0.08s           2025-06-07T15:48:32
+/opt/airflow/dags/pkapi_to_kafka_dag.py    224  0.00s             1           0  0.08s           2025-06-07T15:48:32
+================================================================================
+[2025-06-07T15:49:33.333+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/pkapi_to_kafka_dag.py    234  0.01s             1           0  0.07s           2025-06-07T15:49:03
+/opt/airflow/dags/kafka_producer_dag.py    237  0.00s             1           0  0.06s           2025-06-07T15:49:03
+================================================================================
+[2025-06-07T15:50:03.590+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/pkapi_to_kafka_dag.py    250  0.01s             1           0  0.07s           2025-06-07T15:49:33
+/opt/airflow/dags/kafka_producer_dag.py    253  0.00s             1           0  0.06s           2025-06-07T15:49:33
+================================================================================
+[2025-06-07T15:50:33.907+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/pkapi_to_kafka_dag.py    260  0.00s             1           0  0.15s           2025-06-07T15:50:03
+/opt/airflow/dags/kafka_producer_dag.py    263  0.00s             1           0  0.15s           2025-06-07T15:50:03
+================================================================================
+[2025-06-07T15:51:04.185+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/pkapi_to_kafka_dag.py    276  0.01s             1           0  0.07s           2025-06-07T15:50:33
+/opt/airflow/dags/kafka_producer_dag.py    279  0.00s             1           0  0.06s           2025-06-07T15:50:33
+================================================================================
+[2025-06-07T15:51:34.482+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/pkapi_to_kafka_dag.py    286  0.01s             1           0  0.07s           2025-06-07T15:51:04
+/opt/airflow/dags/kafka_producer_dag.py    289  0.00s             1           0  0.06s           2025-06-07T15:51:04
+================================================================================
+[2025-06-07T15:52:02.751+0000] {manager.py:737} INFO - Searching for files in /opt/airflow/dags
+[2025-06-07T15:52:02.756+0000] {manager.py:740} INFO - There are 2 files in /opt/airflow/dags
+[2025-06-07T15:52:04.775+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/pkapi_to_kafka_dag.py    302  0.01s             1           0  0.08s           2025-06-07T15:51:34
+/opt/airflow/dags/kafka_producer_dag.py    305  0.00s             1           0  0.07s           2025-06-07T15:51:34
+================================================================================
+[2025-06-07T15:52:35.025+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/pkapi_to_kafka_dag.py    312  0.01s             1           0  0.06s           2025-06-07T15:52:04
+/opt/airflow/dags/kafka_producer_dag.py    315  0.00s             1           0  0.05s           2025-06-07T15:52:04
+================================================================================
+[2025-06-07T15:53:05.296+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/pkapi_to_kafka_dag.py    328  0.01s             1           0  0.07s           2025-06-07T15:52:35
+/opt/airflow/dags/kafka_producer_dag.py    331  0.00s             1           0  0.06s           2025-06-07T15:52:35
+================================================================================
+[2025-06-07T15:53:35.524+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/pkapi_to_kafka_dag.py    338  0.01s             1           0  0.07s           2025-06-07T15:53:05
+/opt/airflow/dags/kafka_producer_dag.py    341  0.00s             1           0  0.06s           2025-06-07T15:53:05
+================================================================================
+[2025-06-07T15:54:05.772+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/pkapi_to_kafka_dag.py    354  0.01s             1           0  0.07s           2025-06-07T15:53:35
+/opt/airflow/dags/kafka_producer_dag.py    357  0.00s             1           0  0.06s           2025-06-07T15:53:35
+================================================================================
+[2025-06-07T15:54:36.009+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/pkapi_to_kafka_dag.py    364  0.01s             1           0  0.07s           2025-06-07T15:54:05
+/opt/airflow/dags/kafka_producer_dag.py    367  0.00s             1           0  0.06s           2025-06-07T15:54:05
+================================================================================
+[2025-06-07T15:55:06.286+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/pkapi_to_kafka_dag.py    380  0.03s             1           0  0.08s           2025-06-07T15:54:36
+/opt/airflow/dags/kafka_producer_dag.py    383  0.00s             1           0  0.07s           2025-06-07T15:54:36
+================================================================================

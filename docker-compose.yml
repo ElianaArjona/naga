@@ -5,6 +5,8 @@ services:
     environment:
       ZOOKEEPER_CLIENT_PORT: 2181
       ZOOKEEPER_TICK_TIME: 2000
+    volumes:
+      - zookeeper_data:/bitnami
 
   kafka:
     image: confluentinc/cp-kafka:7.6.0
@@ -19,12 +21,18 @@ services:
       KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT
       KAFKA_INTER_BROKER_LISTENER_NAME: PLAINTEXT
       KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+    volumes:
+      - kafka_data:/bitnami
 
   kafka-cli:
-    image: confluentinc/cp-kafka:7.6.0
+    image: bitnami/kafka:latest
     depends_on:
       - kafka
-    entrypoint: /bin/sh
+    networks:
+      - default
+    environment:
+      - KAFKA_CFG_ZOOKEEPER_CONNECT=zookeeper:2181
+    entrypoint: /bin/bash
     tty: true
 
   postgres:
@@ -39,6 +47,10 @@ services:
 
   clickhouse:
     image: clickhouse/clickhouse-server:latest
+    environment:
+      CLICKHOUSE_DB: default
+      CLICKHOUSE_USER: default
+      CLICKHOUSE_PASSWORD: admin
     ports:
       - "8123:8123"
       - "9000:9000"
@@ -49,6 +61,7 @@ services:
       dockerfile: Dockerfile.airflow
     restart: always
     depends_on:
+      - kafka
       - postgres
     environment:
       AIRFLOW__CORE__EXECUTOR: LocalExecutor
@@ -61,8 +74,12 @@ services:
       - ./plugins:/opt/airflow/plugins
     ports:
       - "8080:8080"
-    command: webserver
-
+    command: >
+      bash -c "
+        airflow db upgrade &&
+        (airflow users create --username admin --firstname Admin --lastname User --role Admin --email admin@example.com --password admin || true) &&
+        airflow webserver"
+        
   airflow-scheduler:
     build:
       context: .
@@ -70,6 +87,7 @@ services:
     restart: always
     depends_on:
       - postgres
+      - kafka
     environment:
       AIRFLOW__CORE__EXECUTOR: LocalExecutor
       AIRFLOW__CORE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres/airflow
@@ -104,4 +122,9 @@ services:
 
 networks:
   default:
-    name: airflowkafka_default
+    name: naga_default
+
+volumes:
+  kafka_data:
+  zookeeper_data:
+
