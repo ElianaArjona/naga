@@ -3,8 +3,8 @@ services:
   zookeeper:
     image: confluentinc/cp-zookeeper:7.6.0
     environment:
-      ZOOKEEPER_CLIENT_PORT: 2181
-      ZOOKEEPER_TICK_TIME: 2000
+      ZOOKEEPER_CLIENT_PORT: ${ZOOKEEPER_CLIENT_PORT:-2181}
+      ZOOKEEPER_TICK_TIME: ${ZOOKEEPER_TICK_TIME:-2000}
     volumes:
       - zookeeper_data:/bitnami
 
@@ -13,11 +13,11 @@ services:
     depends_on:
       - zookeeper
     ports:
-      - "9092:9092"
+      - "${KAFKA_EXTERNAL_PORT:-9092}:9092"
     environment:
-      KAFKA_BROKER_ID: 1
-      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
-      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:9092
+      KAFKA_BROKER_ID: ${KAFKA_BROKER_ID:-1}
+      KAFKA_ZOOKEEPER_CONNECT: ${KAFKA_ZOOKEEPER_CONNECT:-zookeeper:2181}
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://${KAFKA_ADVERTISED_HOSTNAME:-kafka}:${KAFKA_ADVERTISED_PORT:-9092}
       KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT
       KAFKA_INTER_BROKER_LISTENER_NAME: PLAINTEXT
       KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
@@ -31,7 +31,7 @@ services:
     networks:
       - default
     environment:
-      - KAFKA_CFG_ZOOKEEPER_CONNECT=zookeeper:2181
+      KAFKA_CFG_ZOOKEEPER_CONNECT: ${KAFKA_ZOOKEEPER_CONNECT:-zookeeper:2181}
     entrypoint: /bin/bash
     tty: true
 
@@ -39,21 +39,21 @@ services:
     image: postgres:15
     restart: always
     environment:
-      POSTGRES_USER: airflow
-      POSTGRES_PASSWORD: airflow
-      POSTGRES_DB: airflow
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_DB}
     ports:
-      - "55432:5432"
+      - "${POSTGRES_EXTERNAL_PORT:-55432}:5432"
 
   clickhouse:
     image: clickhouse/clickhouse-server:latest
     environment:
-      CLICKHOUSE_DB: default
-      CLICKHOUSE_USER: default
-      CLICKHOUSE_PASSWORD: admin
+      CLICKHOUSE_DB: ${CLICKHOUSE_DB}
+      CLICKHOUSE_USER: ${CLICKHOUSE_USER}
+      CLICKHOUSE_PASSWORD: ${CLICKHOUSE_PASSWORD}
     ports:
-      - "8123:8123"
-      - "9000:9000"
+      - "${CLICKHOUSE_HTTP_PORT:-8123}:8123"
+      - "${CLICKHOUSE_NATIVE_PORT:-9000}:9000"
 
   airflow-webserver:
     build:
@@ -65,19 +65,19 @@ services:
       - postgres
     environment:
       AIRFLOW__CORE__EXECUTOR: LocalExecutor
-      AIRFLOW__CORE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres/airflow
-      AIRFLOW__CORE__FERNET_KEY: ''
+      AIRFLOW__CORE__SQL_ALCHEMY_CONN: ${AIRFLOW__CORE__SQL_ALCHEMY_CONN}
+      AIRFLOW__CORE__FERNET_KEY: ${AIRFLOW__CORE__FERNET_KEY}
       AIRFLOW__CORE__LOAD_EXAMPLES: 'false'
     volumes:
       - ./dags:/opt/airflow/dags
       - ./logs:/opt/airflow/logs
       - ./plugins:/opt/airflow/plugins
     ports:
-      - "8080:8080"
+      - "${AIRFLOW_PORT:-8080}:8080"
     command: >
       bash -c "
         airflow db upgrade &&
-        (airflow users create --username admin --firstname Admin --lastname User --role Admin --email admin@example.com --password admin || true) &&
+        (airflow users create --username ${AIRFLOW_USER} --firstname Admin --lastname User --role Admin --email ${AIRFLOW_EMAIL} --password ${AIRFLOW_PASSWORD} || true) &&
         airflow webserver"
         
   airflow-scheduler:
@@ -90,8 +90,8 @@ services:
       - kafka
     environment:
       AIRFLOW__CORE__EXECUTOR: LocalExecutor
-      AIRFLOW__CORE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres/airflow
-      AIRFLOW__CORE__FERNET_KEY: ''
+      AIRFLOW__CORE__SQL_ALCHEMY_CONN: ${AIRFLOW__CORE__SQL_ALCHEMY_CONN}
+      AIRFLOW__CORE__FERNET_KEY: ${AIRFLOW__CORE__FERNET_KEY}
       AIRFLOW__CORE__LOAD_EXAMPLES: 'false'
     volumes:
       - ./dags:/opt/airflow/dags
@@ -119,7 +119,6 @@ services:
     networks:
       - default
 
-
 networks:
   default:
     name: naga_default
@@ -127,4 +126,3 @@ networks:
 volumes:
   kafka_data:
   zookeeper_data:
-

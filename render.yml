@@ -1,0 +1,96 @@
+services:
+
+  - type: web
+    name: airflow-webserver
+    env: docker
+    dockerfilePath: Dockerfile.airflow
+    buildCommand: ""
+    startCommand: "airflow webserver"
+    envVars:
+      - fromGroup: global-env
+
+  - type: worker
+    name: airflow-scheduler
+    env: docker
+    dockerfilePath: Dockerfile.airflow
+    buildCommand: ""
+    startCommand: "airflow scheduler"
+    envVars:
+      - fromGroup: global-env
+
+  - type: worker
+    name: postgres-consumer
+    env: docker
+    dockerfilePath: postgres_consumer/Dockerfile
+    buildCommand: ""
+    startCommand: "python consumer.py"
+    envVars:
+      - fromGroup: global-env
+
+  - type: worker
+    name: clickhouse-consumer
+    env: docker
+    dockerfilePath: clickhouse_consumer/Dockerfile
+    buildCommand: ""
+    startCommand: "python consumer.py"
+    envVars:
+      - fromGroup: global-env
+
+  - type: private-service
+    name: kafka
+    env: docker
+    image: confluentinc/cp-kafka:7.6.0
+    dockerCommand: ""
+    plan: starter
+    healthCheckPath: /
+    disk:
+      name: kafka-data
+      sizeGB: 5
+    envVars:
+      - key: KAFKA_BROKER_ID
+        value: 1
+      - key: KAFKA_ZOOKEEPER_CONNECT
+        value: zookeeper:2181
+      - key: KAFKA_ADVERTISED_LISTENERS
+        value: PLAINTEXT://kafka:9092
+      - key: KAFKA_LISTENER_SECURITY_PROTOCOL_MAP
+        value: PLAINTEXT:PLAINTEXT
+      - key: KAFKA_INTER_BROKER_LISTENER_NAME
+        value: PLAINTEXT
+      - key: KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR
+        value: 1
+
+  - type: private-service
+    name: zookeeper
+    env: docker
+    image: confluentinc/cp-zookeeper:7.6.0
+    dockerCommand: ""
+    plan: starter
+    disk:
+      name: zookeeper-data
+      sizeGB: 1
+    envVars:
+      - key: ZOOKEEPER_CLIENT_PORT
+        value: 2181
+      - key: ZOOKEEPER_TICK_TIME
+        value: 2000
+
+  - type: private-service
+    name: clickhouse
+    env: docker
+    image: clickhouse/clickhouse-server:latest
+    dockerCommand: ""
+    plan: starter
+    disk:
+      name: clickhouse-data
+      sizeGB: 5
+    envVars:
+      - key: CLICKHOUSE_USER
+        value: default
+      - key: CLICKHOUSE_PASSWORD
+        value: admin
+
+databases:
+  - name: postgres-db
+    databaseName: airflow
+    user: airflow
