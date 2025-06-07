@@ -36,7 +36,7 @@ services:
     envVars:
       - fromGroup: global-env
 
-  - type: private-service
+  - type: worker
     name: kafka
     env: docker
     image: confluentinc/cp-kafka:7.6.0
@@ -60,7 +60,7 @@ services:
       - key: KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR
         value: 1
 
-  - type: private-service
+  - type: worker
     name: zookeeper
     env: docker
     image: confluentinc/cp-zookeeper:7.6.0
@@ -75,7 +75,7 @@ services:
       - key: ZOOKEEPER_TICK_TIME
         value: 2000
 
-  - type: private-service
+  - type: worker
     name: clickhouse
     env: docker
     image: clickhouse/clickhouse-server:latest
