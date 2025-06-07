@@ -1,0 +1,1 @@
+[2025-06-05T23:28:00.123+0000] {task_context_logger.py:104} ERROR - Executor reports task instance <TaskInstance: pkpi_to_kafka_dag.fetch_swapi_and_send_to_kafka scheduled__2025-06-05T23:26:00+00:00 [queued]> finished (failed) although the task says it's queued. (Info: None) Was the task killed externally?

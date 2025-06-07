@@ -1,0 +1,1 @@
+[2025-06-07T14:07:01.272+0000] {task_context_logger.py:104} ERROR - Executor reports task instance <TaskInstance: pokemon_partitioned_to_kafka.fetch_pokemon_and_send_partitioned_to_kafka scheduled__2025-06-07T14:06:00+00:00 [queued]> finished (failed) although the task says it's queued. (Info: None) Was the task killed externally?

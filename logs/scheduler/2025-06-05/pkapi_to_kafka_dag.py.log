@@ -1,0 +1,467 @@
+[2025-06-05T23:14:54.350+0000] {processor.py:161} INFO - Started process (PID=166) to work on /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:14:54.353+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pkapi_to_kafka_dag.py for tasks to queue
+[2025-06-05T23:14:54.354+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:14:54.354+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:14:54.383+0000] {processor.py:840} INFO - DAG(s) 'swapi_to_kafka_dag' retrieved from /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:14:54.516+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:14:54.516+0000] {override.py:1829} INFO - Created Permission View: can edit on DAG:swapi_to_kafka_dag
+[2025-06-05T23:14:54.521+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:14:54.521+0000] {override.py:1829} INFO - Created Permission View: can delete on DAG:swapi_to_kafka_dag
+[2025-06-05T23:14:54.524+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:14:54.524+0000] {override.py:1829} INFO - Created Permission View: can read on DAG:swapi_to_kafka_dag
+[2025-06-05T23:14:54.525+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:14:54.525+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-05T23:14:54.531+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:14:54.531+0000] {dag.py:3118} INFO - Creating ORM DAG for swapi_to_kafka_dag
+[2025-06-05T23:14:54.538+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:14:54.538+0000] {dag.py:3954} INFO - Setting next_dagrun for swapi_to_kafka_dag to 2025-06-05 23:12:00+00:00, run_after=2025-06-05 23:14:00+00:00
+[2025-06-05T23:14:54.551+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pkapi_to_kafka_dag.py took 0.204 seconds
+[2025-06-05T23:15:24.748+0000] {processor.py:161} INFO - Started process (PID=176) to work on /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:15:24.748+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pkapi_to_kafka_dag.py for tasks to queue
+[2025-06-05T23:15:24.749+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:15:24.749+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:15:24.761+0000] {processor.py:840} INFO - DAG(s) 'swapi_to_kafka_dag' retrieved from /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:15:24.779+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:15:24.779+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-05T23:15:24.797+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:15:24.797+0000] {dag.py:3954} INFO - Setting next_dagrun for swapi_to_kafka_dag to 2025-06-05 23:12:00+00:00, run_after=2025-06-05 23:14:00+00:00
+[2025-06-05T23:15:24.811+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pkapi_to_kafka_dag.py took 0.066 seconds
+[2025-06-05T23:15:55.029+0000] {processor.py:161} INFO - Started process (PID=186) to work on /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:15:55.030+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pkapi_to_kafka_dag.py for tasks to queue
+[2025-06-05T23:15:55.031+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:15:55.031+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:15:55.046+0000] {processor.py:840} INFO - DAG(s) 'swapi_to_kafka_dag' retrieved from /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:15:55.058+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:15:55.057+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-05T23:15:55.073+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:15:55.073+0000] {dag.py:3954} INFO - Setting next_dagrun for swapi_to_kafka_dag to 2025-06-05 23:12:00+00:00, run_after=2025-06-05 23:14:00+00:00
+[2025-06-05T23:15:55.086+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pkapi_to_kafka_dag.py took 0.062 seconds
+[2025-06-05T23:16:04.174+0000] {processor.py:161} INFO - Started process (PID=196) to work on /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:16:04.175+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pkapi_to_kafka_dag.py for tasks to queue
+[2025-06-05T23:16:04.178+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:16:04.177+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:16:04.194+0000] {processor.py:840} INFO - DAG(s) 'pkpi_to_kafka_dag' retrieved from /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:16:04.249+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:16:04.248+0000] {override.py:1829} INFO - Created Permission View: can edit on DAG:pkpi_to_kafka_dag
+[2025-06-05T23:16:04.253+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:16:04.253+0000] {override.py:1829} INFO - Created Permission View: can delete on DAG:pkpi_to_kafka_dag
+[2025-06-05T23:16:04.256+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:16:04.256+0000] {override.py:1829} INFO - Created Permission View: can read on DAG:pkpi_to_kafka_dag
+[2025-06-05T23:16:04.256+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:16:04.256+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-05T23:16:04.260+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:16:04.260+0000] {dag.py:3118} INFO - Creating ORM DAG for pkpi_to_kafka_dag
+[2025-06-05T23:16:04.265+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:16:04.265+0000] {dag.py:3954} INFO - Setting next_dagrun for pkpi_to_kafka_dag to 2025-06-05 23:14:00+00:00, run_after=2025-06-05 23:16:00+00:00
+[2025-06-05T23:16:04.272+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pkapi_to_kafka_dag.py took 0.104 seconds
+[2025-06-05T23:16:34.356+0000] {processor.py:161} INFO - Started process (PID=218) to work on /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:16:34.357+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pkapi_to_kafka_dag.py for tasks to queue
+[2025-06-05T23:16:34.360+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:16:34.359+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:16:34.377+0000] {processor.py:840} INFO - DAG(s) 'pkpi_to_kafka_dag' retrieved from /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:16:34.391+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:16:34.391+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-05T23:16:34.403+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:16:34.403+0000] {dag.py:3954} INFO - Setting next_dagrun for pkpi_to_kafka_dag to 2025-06-05 23:16:00+00:00, run_after=2025-06-05 23:18:00+00:00
+[2025-06-05T23:16:34.411+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pkapi_to_kafka_dag.py took 0.061 seconds
+[2025-06-05T23:17:04.661+0000] {processor.py:161} INFO - Started process (PID=228) to work on /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:17:04.662+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pkapi_to_kafka_dag.py for tasks to queue
+[2025-06-05T23:17:04.664+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:17:04.664+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:17:04.675+0000] {processor.py:840} INFO - DAG(s) 'pkpi_to_kafka_dag' retrieved from /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:17:04.724+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:17:04.724+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-05T23:17:04.733+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:17:04.733+0000] {dag.py:3954} INFO - Setting next_dagrun for pkpi_to_kafka_dag to 2025-06-05 23:16:00+00:00, run_after=2025-06-05 23:18:00+00:00
+[2025-06-05T23:17:04.740+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pkapi_to_kafka_dag.py took 0.083 seconds
+[2025-06-05T23:17:34.985+0000] {processor.py:161} INFO - Started process (PID=238) to work on /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:17:34.986+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pkapi_to_kafka_dag.py for tasks to queue
+[2025-06-05T23:17:34.989+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:17:34.988+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:17:35.007+0000] {processor.py:840} INFO - DAG(s) 'pkpi_to_kafka_dag' retrieved from /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:17:35.030+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:17:35.030+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-05T23:17:35.041+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:17:35.041+0000] {dag.py:3954} INFO - Setting next_dagrun for pkpi_to_kafka_dag to 2025-06-05 23:16:00+00:00, run_after=2025-06-05 23:18:00+00:00
+[2025-06-05T23:17:35.049+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pkapi_to_kafka_dag.py took 0.070 seconds
+[2025-06-05T23:18:05.248+0000] {processor.py:161} INFO - Started process (PID=254) to work on /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:18:05.249+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pkapi_to_kafka_dag.py for tasks to queue
+[2025-06-05T23:18:05.249+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:18:05.249+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:18:05.257+0000] {processor.py:840} INFO - DAG(s) 'pkpi_to_kafka_dag' retrieved from /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:18:05.270+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:18:05.270+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-05T23:18:05.281+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:18:05.281+0000] {dag.py:3954} INFO - Setting next_dagrun for pkpi_to_kafka_dag to 2025-06-05 23:18:00+00:00, run_after=2025-06-05 23:20:00+00:00
+[2025-06-05T23:18:05.289+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pkapi_to_kafka_dag.py took 0.044 seconds
+[2025-06-05T23:18:35.583+0000] {processor.py:161} INFO - Started process (PID=264) to work on /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:18:35.585+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pkapi_to_kafka_dag.py for tasks to queue
+[2025-06-05T23:18:35.585+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:18:35.585+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:18:35.603+0000] {processor.py:840} INFO - DAG(s) 'pkpi_to_kafka_dag' retrieved from /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:18:35.618+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:18:35.618+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-05T23:18:35.630+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:18:35.629+0000] {dag.py:3954} INFO - Setting next_dagrun for pkpi_to_kafka_dag to 2025-06-05 23:18:00+00:00, run_after=2025-06-05 23:20:00+00:00
+[2025-06-05T23:18:35.638+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pkapi_to_kafka_dag.py took 0.061 seconds
+[2025-06-05T23:19:05.880+0000] {processor.py:161} INFO - Started process (PID=274) to work on /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:19:05.881+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pkapi_to_kafka_dag.py for tasks to queue
+[2025-06-05T23:19:05.881+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:19:05.881+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:19:05.897+0000] {processor.py:840} INFO - DAG(s) 'pkpi_to_kafka_dag' retrieved from /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:19:05.913+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:19:05.913+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-05T23:19:05.924+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:19:05.924+0000] {dag.py:3954} INFO - Setting next_dagrun for pkpi_to_kafka_dag to 2025-06-05 23:18:00+00:00, run_after=2025-06-05 23:20:00+00:00
+[2025-06-05T23:19:05.932+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pkapi_to_kafka_dag.py took 0.058 seconds
+[2025-06-05T23:19:36.153+0000] {processor.py:161} INFO - Started process (PID=284) to work on /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:19:36.154+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pkapi_to_kafka_dag.py for tasks to queue
+[2025-06-05T23:19:36.155+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:19:36.154+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:19:36.167+0000] {processor.py:840} INFO - DAG(s) 'pkpi_to_kafka_dag' retrieved from /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:19:36.183+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:19:36.182+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-05T23:19:36.195+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:19:36.195+0000] {dag.py:3954} INFO - Setting next_dagrun for pkpi_to_kafka_dag to 2025-06-05 23:18:00+00:00, run_after=2025-06-05 23:20:00+00:00
+[2025-06-05T23:19:36.204+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pkapi_to_kafka_dag.py took 0.054 seconds
+[2025-06-05T23:20:06.404+0000] {processor.py:161} INFO - Started process (PID=300) to work on /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:20:06.404+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pkapi_to_kafka_dag.py for tasks to queue
+[2025-06-05T23:20:06.405+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:20:06.405+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:20:06.415+0000] {processor.py:840} INFO - DAG(s) 'pkpi_to_kafka_dag' retrieved from /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:20:06.431+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:20:06.431+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-05T23:20:06.445+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:20:06.445+0000] {dag.py:3954} INFO - Setting next_dagrun for pkpi_to_kafka_dag to 2025-06-05 23:20:00+00:00, run_after=2025-06-05 23:22:00+00:00
+[2025-06-05T23:20:06.459+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pkapi_to_kafka_dag.py took 0.061 seconds
+[2025-06-05T23:20:36.687+0000] {processor.py:161} INFO - Started process (PID=310) to work on /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:20:36.688+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pkapi_to_kafka_dag.py for tasks to queue
+[2025-06-05T23:20:36.688+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:20:36.688+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:20:36.698+0000] {processor.py:840} INFO - DAG(s) 'pkpi_to_kafka_dag' retrieved from /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:20:36.712+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:20:36.712+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-05T23:20:36.725+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:20:36.725+0000] {dag.py:3954} INFO - Setting next_dagrun for pkpi_to_kafka_dag to 2025-06-05 23:20:00+00:00, run_after=2025-06-05 23:22:00+00:00
+[2025-06-05T23:20:36.735+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pkapi_to_kafka_dag.py took 0.051 seconds
+[2025-06-05T23:20:54.846+0000] {processor.py:161} INFO - Started process (PID=315) to work on /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:20:54.847+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pkapi_to_kafka_dag.py for tasks to queue
+[2025-06-05T23:20:54.848+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:20:54.847+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:20:54.859+0000] {processor.py:840} INFO - DAG(s) 'pkpi_to_kafka_dag' retrieved from /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:20:54.873+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:20:54.873+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-05T23:20:54.884+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:20:54.884+0000] {dag.py:3954} INFO - Setting next_dagrun for pkpi_to_kafka_dag to 2025-06-05 23:20:00+00:00, run_after=2025-06-05 23:22:00+00:00
+[2025-06-05T23:20:54.894+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pkapi_to_kafka_dag.py took 0.055 seconds
+[2025-06-05T23:20:57.879+0000] {processor.py:161} INFO - Started process (PID=320) to work on /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:20:57.880+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pkapi_to_kafka_dag.py for tasks to queue
+[2025-06-05T23:20:57.881+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:20:57.880+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:20:57.906+0000] {processor.py:840} INFO - DAG(s) 'pkpi_to_kafka_dag' retrieved from /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:20:57.922+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:20:57.922+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-05T23:20:57.935+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:20:57.935+0000] {dag.py:3954} INFO - Setting next_dagrun for pkpi_to_kafka_dag to 2025-06-05 23:20:00+00:00, run_after=2025-06-05 23:22:00+00:00
+[2025-06-05T23:20:57.946+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pkapi_to_kafka_dag.py took 0.073 seconds
+[2025-06-05T23:21:28.156+0000] {processor.py:161} INFO - Started process (PID=330) to work on /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:21:28.158+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pkapi_to_kafka_dag.py for tasks to queue
+[2025-06-05T23:21:28.159+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:21:28.159+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:21:28.171+0000] {processor.py:840} INFO - DAG(s) 'pkpi_to_kafka_dag' retrieved from /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:21:28.188+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:21:28.188+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-05T23:21:28.200+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:21:28.200+0000] {dag.py:3954} INFO - Setting next_dagrun for pkpi_to_kafka_dag to 2025-06-05 23:20:00+00:00, run_after=2025-06-05 23:22:00+00:00
+[2025-06-05T23:21:28.211+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pkapi_to_kafka_dag.py took 0.060 seconds
+[2025-06-05T23:21:58.430+0000] {processor.py:161} INFO - Started process (PID=340) to work on /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:21:58.432+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pkapi_to_kafka_dag.py for tasks to queue
+[2025-06-05T23:21:58.433+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:21:58.433+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:21:58.446+0000] {processor.py:840} INFO - DAG(s) 'pkpi_to_kafka_dag' retrieved from /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:21:58.465+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:21:58.465+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-05T23:21:58.477+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:21:58.477+0000] {dag.py:3954} INFO - Setting next_dagrun for pkpi_to_kafka_dag to 2025-06-05 23:20:00+00:00, run_after=2025-06-05 23:22:00+00:00
+[2025-06-05T23:21:58.486+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pkapi_to_kafka_dag.py took 0.060 seconds
+[2025-06-05T23:22:28.713+0000] {processor.py:161} INFO - Started process (PID=356) to work on /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:22:28.714+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pkapi_to_kafka_dag.py for tasks to queue
+[2025-06-05T23:22:28.715+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:22:28.714+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:22:28.726+0000] {processor.py:840} INFO - DAG(s) 'pkpi_to_kafka_dag' retrieved from /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:22:28.743+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:22:28.743+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-05T23:22:28.756+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:22:28.756+0000] {dag.py:3954} INFO - Setting next_dagrun for pkpi_to_kafka_dag to 2025-06-05 23:22:00+00:00, run_after=2025-06-05 23:24:00+00:00
+[2025-06-05T23:22:28.767+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pkapi_to_kafka_dag.py took 0.057 seconds
+[2025-06-05T23:22:58.968+0000] {processor.py:161} INFO - Started process (PID=366) to work on /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:22:58.972+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pkapi_to_kafka_dag.py for tasks to queue
+[2025-06-05T23:22:58.972+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:22:58.972+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:22:58.983+0000] {processor.py:840} INFO - DAG(s) 'pkpi_to_kafka_dag' retrieved from /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:22:58.999+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:22:58.999+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-05T23:22:59.014+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:22:59.014+0000] {dag.py:3954} INFO - Setting next_dagrun for pkpi_to_kafka_dag to 2025-06-05 23:22:00+00:00, run_after=2025-06-05 23:24:00+00:00
+[2025-06-05T23:22:59.024+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pkapi_to_kafka_dag.py took 0.060 seconds
+[2025-06-05T23:23:29.295+0000] {processor.py:161} INFO - Started process (PID=376) to work on /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:23:29.296+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pkapi_to_kafka_dag.py for tasks to queue
+[2025-06-05T23:23:29.297+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:23:29.297+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:23:29.311+0000] {processor.py:840} INFO - DAG(s) 'pkpi_to_kafka_dag' retrieved from /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:23:29.328+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:23:29.328+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-05T23:23:29.341+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:23:29.341+0000] {dag.py:3954} INFO - Setting next_dagrun for pkpi_to_kafka_dag to 2025-06-05 23:22:00+00:00, run_after=2025-06-05 23:24:00+00:00
+[2025-06-05T23:23:29.352+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pkapi_to_kafka_dag.py took 0.064 seconds
+[2025-06-05T23:23:59.629+0000] {processor.py:161} INFO - Started process (PID=386) to work on /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:23:59.630+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pkapi_to_kafka_dag.py for tasks to queue
+[2025-06-05T23:23:59.631+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:23:59.631+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:23:59.645+0000] {processor.py:840} INFO - DAG(s) 'pkpi_to_kafka_dag' retrieved from /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:23:59.663+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:23:59.663+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-05T23:23:59.675+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:23:59.675+0000] {dag.py:3954} INFO - Setting next_dagrun for pkpi_to_kafka_dag to 2025-06-05 23:22:00+00:00, run_after=2025-06-05 23:24:00+00:00
+[2025-06-05T23:23:59.687+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pkapi_to_kafka_dag.py took 0.064 seconds
+[2025-06-05T23:24:29.900+0000] {processor.py:161} INFO - Started process (PID=402) to work on /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:24:29.901+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pkapi_to_kafka_dag.py for tasks to queue
+[2025-06-05T23:24:29.901+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:24:29.901+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:24:29.913+0000] {processor.py:840} INFO - DAG(s) 'pkpi_to_kafka_dag' retrieved from /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:24:29.932+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:24:29.932+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-05T23:24:29.945+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:24:29.945+0000] {dag.py:3954} INFO - Setting next_dagrun for pkpi_to_kafka_dag to 2025-06-05 23:24:00+00:00, run_after=2025-06-05 23:26:00+00:00
+[2025-06-05T23:24:29.955+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pkapi_to_kafka_dag.py took 0.061 seconds
+[2025-06-05T23:25:00.251+0000] {processor.py:161} INFO - Started process (PID=412) to work on /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:25:00.252+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pkapi_to_kafka_dag.py for tasks to queue
+[2025-06-05T23:25:00.253+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:25:00.253+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:25:00.264+0000] {processor.py:840} INFO - DAG(s) 'pkpi_to_kafka_dag' retrieved from /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:25:00.281+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:25:00.281+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-05T23:25:00.294+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:25:00.294+0000] {dag.py:3954} INFO - Setting next_dagrun for pkpi_to_kafka_dag to 2025-06-05 23:24:00+00:00, run_after=2025-06-05 23:26:00+00:00
+[2025-06-05T23:25:00.306+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pkapi_to_kafka_dag.py took 0.059 seconds
+[2025-06-05T23:25:30.516+0000] {processor.py:161} INFO - Started process (PID=422) to work on /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:25:30.517+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pkapi_to_kafka_dag.py for tasks to queue
+[2025-06-05T23:25:30.518+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:25:30.517+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:25:30.527+0000] {processor.py:840} INFO - DAG(s) 'pkpi_to_kafka_dag' retrieved from /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:25:30.544+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:25:30.544+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-05T23:25:30.558+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:25:30.558+0000] {dag.py:3954} INFO - Setting next_dagrun for pkpi_to_kafka_dag to 2025-06-05 23:24:00+00:00, run_after=2025-06-05 23:26:00+00:00
+[2025-06-05T23:25:30.569+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pkapi_to_kafka_dag.py took 0.056 seconds
+[2025-06-05T23:26:00.829+0000] {processor.py:161} INFO - Started process (PID=434) to work on /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:26:00.829+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pkapi_to_kafka_dag.py for tasks to queue
+[2025-06-05T23:26:00.833+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:26:00.833+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:26:00.842+0000] {processor.py:840} INFO - DAG(s) 'pkpi_to_kafka_dag' retrieved from /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:26:00.855+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:26:00.855+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-05T23:26:00.867+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:26:00.867+0000] {dag.py:3954} INFO - Setting next_dagrun for pkpi_to_kafka_dag to 2025-06-05 23:26:00+00:00, run_after=2025-06-05 23:28:00+00:00
+[2025-06-05T23:26:00.876+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pkapi_to_kafka_dag.py took 0.050 seconds
+[2025-06-05T23:26:31.109+0000] {processor.py:161} INFO - Started process (PID=448) to work on /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:26:31.110+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pkapi_to_kafka_dag.py for tasks to queue
+[2025-06-05T23:26:31.111+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:26:31.110+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:26:31.122+0000] {processor.py:840} INFO - DAG(s) 'pkpi_to_kafka_dag' retrieved from /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:26:31.137+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:26:31.137+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-05T23:26:31.148+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:26:31.148+0000] {dag.py:3954} INFO - Setting next_dagrun for pkpi_to_kafka_dag to 2025-06-05 23:26:00+00:00, run_after=2025-06-05 23:28:00+00:00
+[2025-06-05T23:26:31.159+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pkapi_to_kafka_dag.py took 0.053 seconds
+[2025-06-05T23:27:01.439+0000] {processor.py:161} INFO - Started process (PID=458) to work on /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:27:01.440+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pkapi_to_kafka_dag.py for tasks to queue
+[2025-06-05T23:27:01.441+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:27:01.441+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:27:01.453+0000] {processor.py:840} INFO - DAG(s) 'pkpi_to_kafka_dag' retrieved from /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:27:01.470+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:27:01.470+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-05T23:27:01.483+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:27:01.483+0000] {dag.py:3954} INFO - Setting next_dagrun for pkpi_to_kafka_dag to 2025-06-05 23:26:00+00:00, run_after=2025-06-05 23:28:00+00:00
+[2025-06-05T23:27:01.496+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pkapi_to_kafka_dag.py took 0.060 seconds
+[2025-06-05T23:27:24.718+0000] {processor.py:161} INFO - Started process (PID=468) to work on /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:27:24.719+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pkapi_to_kafka_dag.py for tasks to queue
+[2025-06-05T23:27:24.719+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:27:24.719+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:27:24.735+0000] {processor.py:840} INFO - DAG(s) 'pkpi_to_kafka_dag' retrieved from /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:27:24.753+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:27:24.753+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-05T23:27:24.766+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:27:24.766+0000] {dag.py:3954} INFO - Setting next_dagrun for pkpi_to_kafka_dag to 2025-06-05 23:26:00+00:00, run_after=2025-06-05 23:28:00+00:00
+[2025-06-05T23:27:24.776+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pkapi_to_kafka_dag.py took 0.063 seconds
+[2025-06-05T23:27:26.739+0000] {processor.py:161} INFO - Started process (PID=473) to work on /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:27:26.740+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pkapi_to_kafka_dag.py for tasks to queue
+[2025-06-05T23:27:26.740+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:27:26.740+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:27:26.753+0000] {processor.py:840} INFO - DAG(s) 'pkpi_to_kafka_dag' retrieved from /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:27:26.772+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:27:26.772+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-05T23:27:26.786+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:27:26.786+0000] {dag.py:3954} INFO - Setting next_dagrun for pkpi_to_kafka_dag to 2025-06-05 23:26:00+00:00, run_after=2025-06-05 23:28:00+00:00
+[2025-06-05T23:27:26.797+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pkapi_to_kafka_dag.py took 0.062 seconds
+[2025-06-05T23:27:42.931+0000] {processor.py:161} INFO - Started process (PID=483) to work on /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:27:42.931+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pkapi_to_kafka_dag.py for tasks to queue
+[2025-06-05T23:27:42.932+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:27:42.932+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:27:42.942+0000] {processor.py:840} INFO - DAG(s) 'pokemon_partitioned_to_kafka' retrieved from /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:27:42.996+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:27:42.996+0000] {override.py:1829} INFO - Created Permission View: can edit on DAG:pokemon_partitioned_to_kafka
+[2025-06-05T23:27:43.001+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:27:43.001+0000] {override.py:1829} INFO - Created Permission View: can delete on DAG:pokemon_partitioned_to_kafka
+[2025-06-05T23:27:43.005+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:27:43.004+0000] {override.py:1829} INFO - Created Permission View: can read on DAG:pokemon_partitioned_to_kafka
+[2025-06-05T23:27:43.005+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:27:43.005+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-05T23:27:43.011+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:27:43.010+0000] {dag.py:3118} INFO - Creating ORM DAG for pokemon_partitioned_to_kafka
+[2025-06-05T23:27:43.016+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:27:43.016+0000] {dag.py:3954} INFO - Setting next_dagrun for pokemon_partitioned_to_kafka to 2025-06-05 23:26:00+00:00, run_after=2025-06-05 23:27:00+00:00
+[2025-06-05T23:27:43.023+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pkapi_to_kafka_dag.py took 0.096 seconds
+[2025-06-05T23:27:44.012+0000] {processor.py:161} INFO - Started process (PID=488) to work on /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:27:44.013+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pkapi_to_kafka_dag.py for tasks to queue
+[2025-06-05T23:27:44.014+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:27:44.013+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:27:44.033+0000] {processor.py:840} INFO - DAG(s) 'pokemon_partitioned_to_kafka' retrieved from /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:27:44.042+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:27:44.042+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-05T23:27:44.056+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:27:44.056+0000] {dag.py:3954} INFO - Setting next_dagrun for pokemon_partitioned_to_kafka to 2025-06-05 23:26:00+00:00, run_after=2025-06-05 23:27:00+00:00
+[2025-06-05T23:27:44.065+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pkapi_to_kafka_dag.py took 0.060 seconds
+[2025-06-05T23:27:52.107+0000] {processor.py:161} INFO - Started process (PID=493) to work on /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:27:52.108+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pkapi_to_kafka_dag.py for tasks to queue
+[2025-06-05T23:27:52.109+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:27:52.108+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:27:52.122+0000] {processor.py:840} INFO - DAG(s) 'pokemon_partitioned_to_kafka' retrieved from /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:27:52.131+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:27:52.131+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-05T23:27:52.144+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:27:52.144+0000] {dag.py:3954} INFO - Setting next_dagrun for pokemon_partitioned_to_kafka to 2025-06-05 23:26:00+00:00, run_after=2025-06-05 23:27:00+00:00
+[2025-06-05T23:27:52.153+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pkapi_to_kafka_dag.py took 0.051 seconds
+[2025-06-05T23:28:22.308+0000] {processor.py:161} INFO - Started process (PID=504) to work on /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:28:22.308+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pkapi_to_kafka_dag.py for tasks to queue
+[2025-06-05T23:28:22.309+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:28:22.309+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:28:22.318+0000] {processor.py:840} INFO - DAG(s) 'pokemon_partitioned_to_kafka' retrieved from /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:28:22.326+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:28:22.325+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-05T23:28:22.339+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:28:22.338+0000] {dag.py:3954} INFO - Setting next_dagrun for pokemon_partitioned_to_kafka to 2025-06-05 23:27:00+00:00, run_after=2025-06-05 23:28:00+00:00
+[2025-06-05T23:28:22.348+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pkapi_to_kafka_dag.py took 0.044 seconds
+[2025-06-05T23:28:52.544+0000] {processor.py:161} INFO - Started process (PID=520) to work on /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:28:52.544+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pkapi_to_kafka_dag.py for tasks to queue
+[2025-06-05T23:28:52.545+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:28:52.545+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:28:52.557+0000] {processor.py:840} INFO - DAG(s) 'pokemon_partitioned_to_kafka' retrieved from /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:28:52.644+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:28:52.644+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-05T23:28:52.656+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:28:52.656+0000] {dag.py:3954} INFO - Setting next_dagrun for pokemon_partitioned_to_kafka to 2025-06-05 23:28:00+00:00, run_after=2025-06-05 23:29:00+00:00
+[2025-06-05T23:28:52.666+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pkapi_to_kafka_dag.py took 0.125 seconds
+[2025-06-05T23:29:22.775+0000] {processor.py:161} INFO - Started process (PID=536) to work on /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:29:22.776+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pkapi_to_kafka_dag.py for tasks to queue
+[2025-06-05T23:29:22.777+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:29:22.777+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:29:22.794+0000] {processor.py:840} INFO - DAG(s) 'pokemon_partitioned_to_kafka' retrieved from /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:29:22.812+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:29:22.811+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-05T23:29:22.826+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:29:22.826+0000] {dag.py:3954} INFO - Setting next_dagrun for pokemon_partitioned_to_kafka to 2025-06-05 23:29:00+00:00, run_after=2025-06-05 23:30:00+00:00
+[2025-06-05T23:29:22.839+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pkapi_to_kafka_dag.py took 0.071 seconds
+[2025-06-05T23:29:53.071+0000] {processor.py:161} INFO - Started process (PID=546) to work on /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:29:53.072+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pkapi_to_kafka_dag.py for tasks to queue
+[2025-06-05T23:29:53.072+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:29:53.072+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:29:53.083+0000] {processor.py:840} INFO - DAG(s) 'pokemon_partitioned_to_kafka' retrieved from /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:29:53.097+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:29:53.097+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-05T23:29:53.109+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:29:53.109+0000] {dag.py:3954} INFO - Setting next_dagrun for pokemon_partitioned_to_kafka to 2025-06-05 23:29:00+00:00, run_after=2025-06-05 23:30:00+00:00
+[2025-06-05T23:29:53.118+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pkapi_to_kafka_dag.py took 0.050 seconds
+[2025-06-05T23:30:23.323+0000] {processor.py:161} INFO - Started process (PID=562) to work on /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:30:23.324+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pkapi_to_kafka_dag.py for tasks to queue
+[2025-06-05T23:30:23.325+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:30:23.325+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:30:23.343+0000] {processor.py:840} INFO - DAG(s) 'pokemon_partitioned_to_kafka' retrieved from /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:30:23.359+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:30:23.358+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-05T23:30:23.371+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:30:23.371+0000] {dag.py:3954} INFO - Setting next_dagrun for pokemon_partitioned_to_kafka to 2025-06-05 23:30:00+00:00, run_after=2025-06-05 23:31:00+00:00
+[2025-06-05T23:30:23.379+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pkapi_to_kafka_dag.py took 0.063 seconds
+[2025-06-05T23:30:53.608+0000] {processor.py:161} INFO - Started process (PID=572) to work on /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:30:53.610+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pkapi_to_kafka_dag.py for tasks to queue
+[2025-06-05T23:30:53.610+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:30:53.610+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:30:53.628+0000] {processor.py:840} INFO - DAG(s) 'pokemon_partitioned_to_kafka' retrieved from /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:30:53.649+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:30:53.649+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-05T23:30:53.661+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:30:53.661+0000] {dag.py:3954} INFO - Setting next_dagrun for pokemon_partitioned_to_kafka to 2025-06-05 23:30:00+00:00, run_after=2025-06-05 23:31:00+00:00
+[2025-06-05T23:30:53.670+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pkapi_to_kafka_dag.py took 0.068 seconds
+[2025-06-05T23:31:23.900+0000] {processor.py:161} INFO - Started process (PID=588) to work on /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:31:23.901+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pkapi_to_kafka_dag.py for tasks to queue
+[2025-06-05T23:31:23.902+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:31:23.902+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:31:23.920+0000] {processor.py:840} INFO - DAG(s) 'pokemon_partitioned_to_kafka' retrieved from /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:31:23.941+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:31:23.941+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-05T23:31:23.952+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:31:23.952+0000] {dag.py:3954} INFO - Setting next_dagrun for pokemon_partitioned_to_kafka to 2025-06-05 23:31:00+00:00, run_after=2025-06-05 23:32:00+00:00
+[2025-06-05T23:31:23.960+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pkapi_to_kafka_dag.py took 0.066 seconds
+[2025-06-05T23:31:54.208+0000] {processor.py:161} INFO - Started process (PID=598) to work on /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:31:54.209+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pkapi_to_kafka_dag.py for tasks to queue
+[2025-06-05T23:31:54.210+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:31:54.210+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:31:54.228+0000] {processor.py:840} INFO - DAG(s) 'pokemon_partitioned_to_kafka' retrieved from /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:31:54.243+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:31:54.243+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-05T23:31:54.254+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:31:54.254+0000] {dag.py:3954} INFO - Setting next_dagrun for pokemon_partitioned_to_kafka to 2025-06-05 23:31:00+00:00, run_after=2025-06-05 23:32:00+00:00
+[2025-06-05T23:31:54.263+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pkapi_to_kafka_dag.py took 0.061 seconds
+[2025-06-05T23:32:24.512+0000] {processor.py:161} INFO - Started process (PID=614) to work on /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:32:24.513+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pkapi_to_kafka_dag.py for tasks to queue
+[2025-06-05T23:32:24.514+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:32:24.514+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:32:24.526+0000] {processor.py:840} INFO - DAG(s) 'pokemon_partitioned_to_kafka' retrieved from /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:32:24.542+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:32:24.542+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-05T23:32:24.554+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:32:24.554+0000] {dag.py:3954} INFO - Setting next_dagrun for pokemon_partitioned_to_kafka to 2025-06-05 23:32:00+00:00, run_after=2025-06-05 23:33:00+00:00
+[2025-06-05T23:32:24.563+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pkapi_to_kafka_dag.py took 0.055 seconds
+[2025-06-05T23:32:54.825+0000] {processor.py:161} INFO - Started process (PID=624) to work on /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:32:54.826+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pkapi_to_kafka_dag.py for tasks to queue
+[2025-06-05T23:32:54.827+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:32:54.826+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:32:54.845+0000] {processor.py:840} INFO - DAG(s) 'pokemon_partitioned_to_kafka' retrieved from /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:32:54.868+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:32:54.868+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-05T23:32:54.880+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:32:54.880+0000] {dag.py:3954} INFO - Setting next_dagrun for pokemon_partitioned_to_kafka to 2025-06-05 23:32:00+00:00, run_after=2025-06-05 23:33:00+00:00
+[2025-06-05T23:32:54.890+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pkapi_to_kafka_dag.py took 0.070 seconds
+[2025-06-05T23:33:25.110+0000] {processor.py:161} INFO - Started process (PID=640) to work on /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:33:25.111+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pkapi_to_kafka_dag.py for tasks to queue
+[2025-06-05T23:33:25.112+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:33:25.112+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:33:25.126+0000] {processor.py:840} INFO - DAG(s) 'pokemon_partitioned_to_kafka' retrieved from /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:33:25.143+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:33:25.142+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-05T23:33:25.155+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:33:25.154+0000] {dag.py:3954} INFO - Setting next_dagrun for pokemon_partitioned_to_kafka to 2025-06-05 23:33:00+00:00, run_after=2025-06-05 23:34:00+00:00
+[2025-06-05T23:33:25.163+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pkapi_to_kafka_dag.py took 0.057 seconds
+[2025-06-05T23:33:55.419+0000] {processor.py:161} INFO - Started process (PID=650) to work on /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:33:55.420+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pkapi_to_kafka_dag.py for tasks to queue
+[2025-06-05T23:33:55.420+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:33:55.420+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:33:55.438+0000] {processor.py:840} INFO - DAG(s) 'pokemon_partitioned_to_kafka' retrieved from /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:33:55.457+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:33:55.457+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-05T23:33:55.468+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:33:55.468+0000] {dag.py:3954} INFO - Setting next_dagrun for pokemon_partitioned_to_kafka to 2025-06-05 23:33:00+00:00, run_after=2025-06-05 23:34:00+00:00
+[2025-06-05T23:33:55.476+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pkapi_to_kafka_dag.py took 0.063 seconds
+[2025-06-05T23:34:25.713+0000] {processor.py:161} INFO - Started process (PID=666) to work on /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:34:25.714+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pkapi_to_kafka_dag.py for tasks to queue
+[2025-06-05T23:34:25.714+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:34:25.714+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:34:25.725+0000] {processor.py:840} INFO - DAG(s) 'pokemon_partitioned_to_kafka' retrieved from /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:34:25.739+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:34:25.739+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-05T23:34:25.750+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:34:25.749+0000] {dag.py:3954} INFO - Setting next_dagrun for pokemon_partitioned_to_kafka to 2025-06-05 23:34:00+00:00, run_after=2025-06-05 23:35:00+00:00
+[2025-06-05T23:34:25.758+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pkapi_to_kafka_dag.py took 0.048 seconds
+[2025-06-05T23:34:56.003+0000] {processor.py:161} INFO - Started process (PID=676) to work on /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:34:56.003+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pkapi_to_kafka_dag.py for tasks to queue
+[2025-06-05T23:34:56.004+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:34:56.004+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:34:56.016+0000] {processor.py:840} INFO - DAG(s) 'pokemon_partitioned_to_kafka' retrieved from /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:34:56.032+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:34:56.032+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-05T23:34:56.044+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:34:56.044+0000] {dag.py:3954} INFO - Setting next_dagrun for pokemon_partitioned_to_kafka to 2025-06-05 23:34:00+00:00, run_after=2025-06-05 23:35:00+00:00
+[2025-06-05T23:34:56.052+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pkapi_to_kafka_dag.py took 0.054 seconds
+[2025-06-05T23:35:26.308+0000] {processor.py:161} INFO - Started process (PID=692) to work on /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:35:26.309+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pkapi_to_kafka_dag.py for tasks to queue
+[2025-06-05T23:35:26.310+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:35:26.310+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:35:26.328+0000] {processor.py:840} INFO - DAG(s) 'pokemon_partitioned_to_kafka' retrieved from /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:35:26.350+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:35:26.350+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-05T23:35:26.361+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:35:26.361+0000] {dag.py:3954} INFO - Setting next_dagrun for pokemon_partitioned_to_kafka to 2025-06-05 23:35:00+00:00, run_after=2025-06-05 23:36:00+00:00
+[2025-06-05T23:35:26.369+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pkapi_to_kafka_dag.py took 0.067 seconds
+[2025-06-05T23:35:56.645+0000] {processor.py:161} INFO - Started process (PID=702) to work on /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:35:56.646+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pkapi_to_kafka_dag.py for tasks to queue
+[2025-06-05T23:35:56.647+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:35:56.647+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:35:56.665+0000] {processor.py:840} INFO - DAG(s) 'pokemon_partitioned_to_kafka' retrieved from /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:35:56.685+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:35:56.685+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-05T23:35:56.697+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:35:56.696+0000] {dag.py:3954} INFO - Setting next_dagrun for pokemon_partitioned_to_kafka to 2025-06-05 23:35:00+00:00, run_after=2025-06-05 23:36:00+00:00
+[2025-06-05T23:35:56.704+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pkapi_to_kafka_dag.py took 0.065 seconds
+[2025-06-05T23:36:26.929+0000] {processor.py:161} INFO - Started process (PID=718) to work on /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:36:26.930+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pkapi_to_kafka_dag.py for tasks to queue
+[2025-06-05T23:36:26.930+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:36:26.930+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:36:26.948+0000] {processor.py:840} INFO - DAG(s) 'pokemon_partitioned_to_kafka' retrieved from /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:36:26.967+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:36:26.967+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-05T23:36:26.979+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:36:26.979+0000] {dag.py:3954} INFO - Setting next_dagrun for pokemon_partitioned_to_kafka to 2025-06-05 23:36:00+00:00, run_after=2025-06-05 23:37:00+00:00
+[2025-06-05T23:36:26.987+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pkapi_to_kafka_dag.py took 0.064 seconds
+[2025-06-05T23:36:57.225+0000] {processor.py:161} INFO - Started process (PID=728) to work on /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:36:57.226+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pkapi_to_kafka_dag.py for tasks to queue
+[2025-06-05T23:36:57.227+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:36:57.227+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:36:57.245+0000] {processor.py:840} INFO - DAG(s) 'pokemon_partitioned_to_kafka' retrieved from /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:36:57.266+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:36:57.266+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-05T23:36:57.278+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:36:57.277+0000] {dag.py:3954} INFO - Setting next_dagrun for pokemon_partitioned_to_kafka to 2025-06-05 23:36:00+00:00, run_after=2025-06-05 23:37:00+00:00
+[2025-06-05T23:36:57.286+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pkapi_to_kafka_dag.py took 0.065 seconds
+[2025-06-05T23:37:27.532+0000] {processor.py:161} INFO - Started process (PID=744) to work on /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:37:27.533+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pkapi_to_kafka_dag.py for tasks to queue
+[2025-06-05T23:37:27.534+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:37:27.534+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:37:27.552+0000] {processor.py:840} INFO - DAG(s) 'pokemon_partitioned_to_kafka' retrieved from /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:37:27.570+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:37:27.570+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-05T23:37:27.582+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:37:27.582+0000] {dag.py:3954} INFO - Setting next_dagrun for pokemon_partitioned_to_kafka to 2025-06-05 23:37:00+00:00, run_after=2025-06-05 23:38:00+00:00
+[2025-06-05T23:37:27.590+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pkapi_to_kafka_dag.py took 0.063 seconds
+[2025-06-05T23:37:57.815+0000] {processor.py:161} INFO - Started process (PID=754) to work on /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:37:57.816+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pkapi_to_kafka_dag.py for tasks to queue
+[2025-06-05T23:37:57.817+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:37:57.817+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:37:57.835+0000] {processor.py:840} INFO - DAG(s) 'pokemon_partitioned_to_kafka' retrieved from /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:37:57.853+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:37:57.853+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-05T23:37:57.865+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:37:57.865+0000] {dag.py:3954} INFO - Setting next_dagrun for pokemon_partitioned_to_kafka to 2025-06-05 23:37:00+00:00, run_after=2025-06-05 23:38:00+00:00
+[2025-06-05T23:37:57.873+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pkapi_to_kafka_dag.py took 0.064 seconds
+[2025-06-05T23:38:28.095+0000] {processor.py:161} INFO - Started process (PID=770) to work on /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:38:28.096+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pkapi_to_kafka_dag.py for tasks to queue
+[2025-06-05T23:38:28.097+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:38:28.096+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:38:28.115+0000] {processor.py:840} INFO - DAG(s) 'pokemon_partitioned_to_kafka' retrieved from /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:38:28.136+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:38:28.135+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-05T23:38:28.147+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:38:28.147+0000] {dag.py:3954} INFO - Setting next_dagrun for pokemon_partitioned_to_kafka to 2025-06-05 23:38:00+00:00, run_after=2025-06-05 23:39:00+00:00
+[2025-06-05T23:38:28.154+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pkapi_to_kafka_dag.py took 0.065 seconds
+[2025-06-05T23:38:58.348+0000] {processor.py:161} INFO - Started process (PID=780) to work on /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:38:58.349+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pkapi_to_kafka_dag.py for tasks to queue
+[2025-06-05T23:38:58.350+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:38:58.349+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:38:58.367+0000] {processor.py:840} INFO - DAG(s) 'pokemon_partitioned_to_kafka' retrieved from /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:38:58.387+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:38:58.387+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-05T23:38:58.398+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:38:58.398+0000] {dag.py:3954} INFO - Setting next_dagrun for pokemon_partitioned_to_kafka to 2025-06-05 23:38:00+00:00, run_after=2025-06-05 23:39:00+00:00
+[2025-06-05T23:38:58.406+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pkapi_to_kafka_dag.py took 0.065 seconds
+[2025-06-05T23:39:28.632+0000] {processor.py:161} INFO - Started process (PID=796) to work on /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:39:28.633+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pkapi_to_kafka_dag.py for tasks to queue
+[2025-06-05T23:39:28.634+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:39:28.633+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:39:28.651+0000] {processor.py:840} INFO - DAG(s) 'pokemon_partitioned_to_kafka' retrieved from /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:39:28.668+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:39:28.668+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-05T23:39:28.680+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:39:28.679+0000] {dag.py:3954} INFO - Setting next_dagrun for pokemon_partitioned_to_kafka to 2025-06-05 23:39:00+00:00, run_after=2025-06-05 23:40:00+00:00
+[2025-06-05T23:39:28.687+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pkapi_to_kafka_dag.py took 0.061 seconds
+[2025-06-05T23:39:58.961+0000] {processor.py:161} INFO - Started process (PID=806) to work on /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:39:58.962+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pkapi_to_kafka_dag.py for tasks to queue
+[2025-06-05T23:39:58.963+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:39:58.962+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:39:58.980+0000] {processor.py:840} INFO - DAG(s) 'pokemon_partitioned_to_kafka' retrieved from /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:39:59.000+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:39:59.000+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-05T23:39:59.011+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:39:59.011+0000] {dag.py:3954} INFO - Setting next_dagrun for pokemon_partitioned_to_kafka to 2025-06-05 23:39:00+00:00, run_after=2025-06-05 23:40:00+00:00
+[2025-06-05T23:39:59.019+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pkapi_to_kafka_dag.py took 0.064 seconds
+[2025-06-05T23:40:29.225+0000] {processor.py:161} INFO - Started process (PID=822) to work on /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:40:29.226+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pkapi_to_kafka_dag.py for tasks to queue
+[2025-06-05T23:40:29.227+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:40:29.227+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:40:29.246+0000] {processor.py:840} INFO - DAG(s) 'pokemon_partitioned_to_kafka' retrieved from /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:40:29.266+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:40:29.266+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-05T23:40:29.277+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:40:29.277+0000] {dag.py:3954} INFO - Setting next_dagrun for pokemon_partitioned_to_kafka to 2025-06-05 23:40:00+00:00, run_after=2025-06-05 23:41:00+00:00
+[2025-06-05T23:40:29.285+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pkapi_to_kafka_dag.py took 0.066 seconds
+[2025-06-05T23:56:03.618+0000] {processor.py:161} INFO - Started process (PID=834) to work on /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:56:03.620+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pkapi_to_kafka_dag.py for tasks to queue
+[2025-06-05T23:56:03.621+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:56:03.620+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:56:03.632+0000] {processor.py:840} INFO - DAG(s) 'pokemon_partitioned_to_kafka' retrieved from /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:56:03.647+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:56:03.647+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-05T23:56:03.658+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:56:03.658+0000] {dag.py:3954} INFO - Setting next_dagrun for pokemon_partitioned_to_kafka to 2025-06-05 23:55:00+00:00, run_after=2025-06-05 23:56:00+00:00
+[2025-06-05T23:56:03.670+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pkapi_to_kafka_dag.py took 0.055 seconds
+[2025-06-05T23:56:33.908+0000] {processor.py:161} INFO - Started process (PID=850) to work on /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:56:33.909+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pkapi_to_kafka_dag.py for tasks to queue
+[2025-06-05T23:56:33.909+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:56:33.909+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:56:33.921+0000] {processor.py:840} INFO - DAG(s) 'pokemon_partitioned_to_kafka' retrieved from /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:56:33.939+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:56:33.939+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-05T23:56:33.953+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:56:33.953+0000] {dag.py:3954} INFO - Setting next_dagrun for pokemon_partitioned_to_kafka to 2025-06-05 23:56:00+00:00, run_after=2025-06-05 23:57:00+00:00
+[2025-06-05T23:56:33.965+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pkapi_to_kafka_dag.py took 0.062 seconds
+[2025-06-05T23:57:04.229+0000] {processor.py:161} INFO - Started process (PID=866) to work on /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:57:04.230+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pkapi_to_kafka_dag.py for tasks to queue
+[2025-06-05T23:57:04.231+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:57:04.231+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:57:04.242+0000] {processor.py:840} INFO - DAG(s) 'pokemon_partitioned_to_kafka' retrieved from /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:57:04.260+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:57:04.260+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-05T23:57:04.273+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:57:04.273+0000] {dag.py:3954} INFO - Setting next_dagrun for pokemon_partitioned_to_kafka to 2025-06-05 23:57:00+00:00, run_after=2025-06-05 23:58:00+00:00
+[2025-06-05T23:57:04.283+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pkapi_to_kafka_dag.py took 0.058 seconds
+[2025-06-05T23:57:34.599+0000] {processor.py:161} INFO - Started process (PID=876) to work on /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:57:34.600+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pkapi_to_kafka_dag.py for tasks to queue
+[2025-06-05T23:57:34.601+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:57:34.601+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:57:34.615+0000] {processor.py:840} INFO - DAG(s) 'pokemon_partitioned_to_kafka' retrieved from /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:57:34.629+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:57:34.629+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-05T23:57:34.645+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:57:34.645+0000] {dag.py:3954} INFO - Setting next_dagrun for pokemon_partitioned_to_kafka to 2025-06-05 23:57:00+00:00, run_after=2025-06-05 23:58:00+00:00
+[2025-06-05T23:57:34.654+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pkapi_to_kafka_dag.py took 0.061 seconds
+[2025-06-05T23:58:04.962+0000] {processor.py:161} INFO - Started process (PID=892) to work on /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:58:04.963+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pkapi_to_kafka_dag.py for tasks to queue
+[2025-06-05T23:58:04.964+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:58:04.963+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:58:04.976+0000] {processor.py:840} INFO - DAG(s) 'pokemon_partitioned_to_kafka' retrieved from /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:58:04.991+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:58:04.991+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-05T23:58:05.004+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:58:05.004+0000] {dag.py:3954} INFO - Setting next_dagrun for pokemon_partitioned_to_kafka to 2025-06-05 23:58:00+00:00, run_after=2025-06-05 23:59:00+00:00
+[2025-06-05T23:58:05.012+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pkapi_to_kafka_dag.py took 0.055 seconds
+[2025-06-05T23:58:35.306+0000] {processor.py:161} INFO - Started process (PID=902) to work on /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:58:35.307+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pkapi_to_kafka_dag.py for tasks to queue
+[2025-06-05T23:58:35.308+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:58:35.308+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:58:35.323+0000] {processor.py:840} INFO - DAG(s) 'pokemon_partitioned_to_kafka' retrieved from /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:58:35.342+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:58:35.342+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-05T23:58:35.355+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:58:35.355+0000] {dag.py:3954} INFO - Setting next_dagrun for pokemon_partitioned_to_kafka to 2025-06-05 23:58:00+00:00, run_after=2025-06-05 23:59:00+00:00
+[2025-06-05T23:58:35.365+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pkapi_to_kafka_dag.py took 0.066 seconds
+[2025-06-05T23:59:05.661+0000] {processor.py:161} INFO - Started process (PID=918) to work on /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:59:05.661+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pkapi_to_kafka_dag.py for tasks to queue
+[2025-06-05T23:59:05.662+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:59:05.662+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:59:05.673+0000] {processor.py:840} INFO - DAG(s) 'pokemon_partitioned_to_kafka' retrieved from /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:59:05.688+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:59:05.688+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-05T23:59:05.701+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:59:05.701+0000] {dag.py:3954} INFO - Setting next_dagrun for pokemon_partitioned_to_kafka to 2025-06-05 23:59:00+00:00, run_after=2025-06-06 00:00:00+00:00
+[2025-06-05T23:59:05.709+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pkapi_to_kafka_dag.py took 0.055 seconds
+[2025-06-05T23:59:35.982+0000] {processor.py:161} INFO - Started process (PID=928) to work on /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:59:35.983+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/pkapi_to_kafka_dag.py for tasks to queue
+[2025-06-05T23:59:35.984+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:59:35.984+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:59:35.997+0000] {processor.py:840} INFO - DAG(s) 'pokemon_partitioned_to_kafka' retrieved from /opt/airflow/dags/pkapi_to_kafka_dag.py
+[2025-06-05T23:59:36.014+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:59:36.014+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-05T23:59:36.029+0000] {logging_mixin.py:188} INFO - [2025-06-05T23:59:36.029+0000] {dag.py:3954} INFO - Setting next_dagrun for pokemon_partitioned_to_kafka to 2025-06-05 23:59:00+00:00, run_after=2025-06-06 00:00:00+00:00
+[2025-06-05T23:59:36.038+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/pkapi_to_kafka_dag.py took 0.062 seconds

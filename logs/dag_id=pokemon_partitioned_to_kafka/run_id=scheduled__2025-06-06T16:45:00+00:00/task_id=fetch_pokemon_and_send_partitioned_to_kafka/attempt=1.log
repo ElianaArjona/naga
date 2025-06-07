@@ -1,0 +1,38 @@
+[2025-06-06T16:46:43.942+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-06-06T16:46:43.961+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: pokemon_partitioned_to_kafka.fetch_pokemon_and_send_partitioned_to_kafka scheduled__2025-06-06T16:45:00+00:00 [queued]>
+[2025-06-06T16:46:43.966+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: pokemon_partitioned_to_kafka.fetch_pokemon_and_send_partitioned_to_kafka scheduled__2025-06-06T16:45:00+00:00 [queued]>
+[2025-06-06T16:46:43.967+0000] {taskinstance.py:2303} INFO - Starting attempt 1 of 1
+[2025-06-06T16:46:43.976+0000] {taskinstance.py:2327} INFO - Executing <Task(PythonOperator): fetch_pokemon_and_send_partitioned_to_kafka> on 2025-06-06 16:45:00+00:00
+[2025-06-06T16:46:43.983+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=2164) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-06-06T16:46:43.984+0000] {standard_task_runner.py:63} INFO - Started process 2166 to run task
+[2025-06-06T16:46:43.983+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'pokemon_partitioned_to_kafka', 'fetch_pokemon_and_send_partitioned_to_kafka', 'scheduled__2025-06-06T16:45:00+00:00', '--job-id', '119', '--raw', '--subdir', 'DAGS_FOLDER/pkapi_to_kafka_dag.py', '--cfg-path', '/tmp/tmp6oh6b4yb']
+[2025-06-06T16:46:43.986+0000] {standard_task_runner.py:91} INFO - Job 119: Subtask fetch_pokemon_and_send_partitioned_to_kafka
+[2025-06-06T16:46:44.004+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-06-06T16:46:44.056+0000] {task_command.py:426} INFO - Running <TaskInstance: pokemon_partitioned_to_kafka.fetch_pokemon_and_send_partitioned_to_kafka scheduled__2025-06-06T16:45:00+00:00 [running]> on host 856ef77f0083
+[2025-06-06T16:46:44.133+0000] {taskinstance.py:2644} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='pokemon_partitioned_to_kafka' AIRFLOW_CTX_TASK_ID='fetch_pokemon_and_send_partitioned_to_kafka' AIRFLOW_CTX_EXECUTION_DATE='2025-06-06T16:45:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-06-06T16:45:00+00:00'
+[2025-06-06T16:46:44.135+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-06-06T16:46:45.160+0000] {logging_mixin.py:188} INFO - Produced: bulbasaur with key=grass
+[2025-06-06T16:46:45.606+0000] {logging_mixin.py:188} INFO - Produced: ivysaur with key=grass
+[2025-06-06T16:46:46.033+0000] {logging_mixin.py:188} INFO - Produced: venusaur with key=grass
+[2025-06-06T16:46:46.473+0000] {logging_mixin.py:188} INFO - Produced: charmander with key=fire
+[2025-06-06T16:46:46.913+0000] {logging_mixin.py:188} INFO - Produced: charmeleon with key=fire
+[2025-06-06T16:46:47.900+0000] {logging_mixin.py:188} INFO - Error fetching Pokémon ID 6: HTTPSConnectionPool(host='pokeapi.co', port=443): Max retries exceeded with url: /api/v2/pokemon/6/ (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1000)')))
+[2025-06-06T16:46:48.210+0000] {logging_mixin.py:188} INFO - Produced: squirtle with key=water
+[2025-06-06T16:46:48.653+0000] {logging_mixin.py:188} INFO - Produced: wartortle with key=water
+[2025-06-06T16:46:49.117+0000] {logging_mixin.py:188} INFO - Produced: blastoise with key=water
+[2025-06-06T16:46:49.570+0000] {logging_mixin.py:188} INFO - Produced: caterpie with key=bug
+[2025-06-06T16:46:50.032+0000] {logging_mixin.py:188} INFO - Produced: metapod with key=bug
+[2025-06-06T16:46:50.509+0000] {logging_mixin.py:188} INFO - Produced: butterfree with key=bug
+[2025-06-06T16:46:50.951+0000] {logging_mixin.py:188} INFO - Produced: weedle with key=bug
+[2025-06-06T16:46:51.396+0000] {logging_mixin.py:188} INFO - Produced: kakuna with key=bug
+[2025-06-06T16:46:51.859+0000] {logging_mixin.py:188} INFO - Produced: beedrill with key=bug
+[2025-06-06T16:46:52.325+0000] {logging_mixin.py:188} INFO - Produced: pidgey with key=normal
+[2025-06-06T16:46:52.799+0000] {logging_mixin.py:188} INFO - Produced: pidgeotto with key=normal
+[2025-06-06T16:46:53.274+0000] {logging_mixin.py:188} INFO - Produced: pidgeot with key=normal
+[2025-06-06T16:46:53.743+0000] {logging_mixin.py:188} INFO - Produced: rattata with key=normal
+[2025-06-06T16:46:53.948+0000] {python.py:237} INFO - Done. Returned value was: None
+[2025-06-06T16:46:53.950+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-06-06T16:46:53.965+0000] {taskinstance.py:1205} INFO - Marking task as SUCCESS. dag_id=pokemon_partitioned_to_kafka, task_id=fetch_pokemon_and_send_partitioned_to_kafka, execution_date=20250606T164500, start_date=20250606T164643, end_date=20250606T164653
+[2025-06-06T16:46:53.983+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-06-06T16:46:53.997+0000] {taskinstance.py:3482} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-06-06T16:46:53.998+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
