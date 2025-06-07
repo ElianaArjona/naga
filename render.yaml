@@ -1,5 +1,5 @@
 services:
-
+  # AIRFLOW WEB SERVER
   - type: web
     name: airflow-webserver
     env: docker
@@ -9,6 +9,7 @@ services:
     envVars:
       - fromGroup: global-env
 
+  # AIRFLOW SCHEDULER
   - type: worker
     name: airflow-scheduler
     env: docker
@@ -18,6 +19,7 @@ services:
     envVars:
       - fromGroup: global-env
 
+  # POSTGRES CONSUMER
   - type: worker
     name: postgres-consumer
     env: docker
@@ -27,6 +29,7 @@ services:
     envVars:
       - fromGroup: global-env
 
+  # CLICKHOUSE CONSUMER
   - type: worker
     name: clickhouse-consumer
     env: docker
@@ -36,13 +39,12 @@ services:
     envVars:
       - fromGroup: global-env
 
+  # KAFKA
   - type: worker
     name: kafka
-    env: docker
+    env: docker-image
     image: confluentinc/cp-kafka:7.6.0
-    dockerCommand: ""
     plan: starter
-    healthCheckPath: /
     disk:
       name: kafka-data
       sizeGB: 5
@@ -60,11 +62,11 @@ services:
       - key: KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR
         value: 1
 
+  # ZOOKEEPER
   - type: worker
     name: zookeeper
-    env: docker
+    env: docker-image
     image: confluentinc/cp-zookeeper:7.6.0
-    dockerCommand: ""
     plan: starter
     disk:
       name: zookeeper-data
@@ -75,11 +77,11 @@ services:
       - key: ZOOKEEPER_TICK_TIME
         value: 2000
 
+  # CLICKHOUSE
   - type: worker
     name: clickhouse
-    env: docker
+    env: docker-image
     image: clickhouse/clickhouse-server:latest
-    dockerCommand: ""
     plan: starter
     disk:
       name: clickhouse-data
@@ -89,8 +91,3 @@ services:
         value: default
       - key: CLICKHOUSE_PASSWORD
         value: admin
-
-databases:
-  - name: postgres-db
-    databaseName: airflow
-    user: airflow
