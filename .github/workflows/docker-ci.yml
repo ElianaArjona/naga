@@ -1,0 +1,66 @@
+name: Docker CI
+
+on:
+  push:
+    branches:
+      - main
+    workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    env:
+      # Define the path to your docker-compose.yml file.
+      # Since it's in the root, we use '.'
+      DOCKER_COMPOSE_PATH: .
+      # Define the Python code directories to be checked
+      PYTHON_CODE_DIRS: "airflow postgres_consumer clickhouse_consumer"
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        # This action sets up a Python environment for running linters and type checkers.
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9' # You can specify your Python version here
+
+      - name: Install Python dependencies
+        # Install Python dependencies from requirements.txt, including mypy and flake8.
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Set up Docker Buildx
+        # This action sets up Docker Buildx, which provides enhanced build capabilities.
+        uses: docker/setup-buildx-action@v2
+
+      - name: Validate Docker Compose Configuration
+        # This step validates the syntax and structure of your docker-compose.yml file.
+        # It changes the working directory to DOCKER_COMPOSE_PATH before running the command.
+        working-directory: ${{ env.DOCKER_COMPOSE_PATH }}
+        run: docker-compose config
+
+      - name: Build Docker Compose Stack
+        # This step builds all services defined in your docker-compose.yml file.
+        # It changes the working directory to DOCKER_COMPOSE_PATH before running the command.
+        working-directory: ${{ env.DOCKER_COMPOSE_PATH }}
+        run: docker-compose build
+
+      - name: Run Mypy Type Checking
+        # Runs mypy for static type checking across your Python directories iteratively.
+        run: |
+          for dir in ${{ env.PYTHON_CODE_DIRS }}; do
+            echo "Running mypy on $dir..."
+            mypy "$dir"
+          done
+
+      - name: Run Flake8 Linting
+        # Runs flake8 for linting (style guide enforcement) across your Python directories iteratively.
+        run: |
+          for dir in ${{ env.PYTHON_CODE_DIRS }}; do
+            echo "Running flake8 on $dir..."
+            flake8 "$dir"
+          done
