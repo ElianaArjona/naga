@@ -4,7 +4,12 @@ on:
   push:
     branches:
       - main
-    workflow_dispatch:
+      - airflow-kafka-basic
+  pull_request:
+    branches:
+      - main
+      - airflow-kafka-basic
+  workflow_dispatch:
 
 jobs:
   build:

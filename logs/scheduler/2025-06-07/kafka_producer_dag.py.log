@@ -1450,3 +1450,73 @@
 [2025-06-07T16:21:51.107+0000] {logging_mixin.py:188} INFO - [2025-06-07T16:21:51.107+0000] {dag.py:3096} INFO - Sync 1 DAGs
 [2025-06-07T16:21:51.114+0000] {logging_mixin.py:188} INFO - [2025-06-07T16:21:51.114+0000] {dag.py:3954} INFO - Setting next_dagrun for kafka_producer_dag to None, run_after=None
 [2025-06-07T16:21:51.129+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/kafka_producer_dag.py took 0.054 seconds
+[2025-06-07T16:22:21.352+0000] {processor.py:161} INFO - Started process (PID=1085) to work on /opt/airflow/dags/kafka_producer_dag.py
+[2025-06-07T16:22:21.352+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/kafka_producer_dag.py for tasks to queue
+[2025-06-07T16:22:21.354+0000] {logging_mixin.py:188} INFO - [2025-06-07T16:22:21.353+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_producer_dag.py
+[2025-06-07T16:22:21.363+0000] {processor.py:840} INFO - DAG(s) 'kafka_producer_dag' retrieved from /opt/airflow/dags/kafka_producer_dag.py
+[2025-06-07T16:22:21.380+0000] {logging_mixin.py:188} INFO - [2025-06-07T16:22:21.379+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-07T16:22:21.386+0000] {logging_mixin.py:188} INFO - [2025-06-07T16:22:21.386+0000] {dag.py:3954} INFO - Setting next_dagrun for kafka_producer_dag to None, run_after=None
+[2025-06-07T16:22:21.400+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/kafka_producer_dag.py took 0.053 seconds
+[2025-06-07T16:22:51.646+0000] {processor.py:161} INFO - Started process (PID=1095) to work on /opt/airflow/dags/kafka_producer_dag.py
+[2025-06-07T16:22:51.649+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/kafka_producer_dag.py for tasks to queue
+[2025-06-07T16:22:51.651+0000] {logging_mixin.py:188} INFO - [2025-06-07T16:22:51.651+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_producer_dag.py
+[2025-06-07T16:22:51.665+0000] {processor.py:840} INFO - DAG(s) 'kafka_producer_dag' retrieved from /opt/airflow/dags/kafka_producer_dag.py
+[2025-06-07T16:22:51.682+0000] {logging_mixin.py:188} INFO - [2025-06-07T16:22:51.682+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-07T16:22:51.689+0000] {logging_mixin.py:188} INFO - [2025-06-07T16:22:51.689+0000] {dag.py:3954} INFO - Setting next_dagrun for kafka_producer_dag to None, run_after=None
+[2025-06-07T16:22:51.701+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/kafka_producer_dag.py took 0.060 seconds
+[2025-06-07T16:23:21.946+0000] {processor.py:161} INFO - Started process (PID=1111) to work on /opt/airflow/dags/kafka_producer_dag.py
+[2025-06-07T16:23:21.947+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/kafka_producer_dag.py for tasks to queue
+[2025-06-07T16:23:21.949+0000] {logging_mixin.py:188} INFO - [2025-06-07T16:23:21.948+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_producer_dag.py
+[2025-06-07T16:23:21.965+0000] {processor.py:840} INFO - DAG(s) 'kafka_producer_dag' retrieved from /opt/airflow/dags/kafka_producer_dag.py
+[2025-06-07T16:23:21.985+0000] {logging_mixin.py:188} INFO - [2025-06-07T16:23:21.984+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-07T16:23:21.992+0000] {logging_mixin.py:188} INFO - [2025-06-07T16:23:21.992+0000] {dag.py:3954} INFO - Setting next_dagrun for kafka_producer_dag to None, run_after=None
+[2025-06-07T16:23:22.003+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/kafka_producer_dag.py took 0.061 seconds
+[2025-06-07T16:23:52.230+0000] {processor.py:161} INFO - Started process (PID=1121) to work on /opt/airflow/dags/kafka_producer_dag.py
+[2025-06-07T16:23:52.232+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/kafka_producer_dag.py for tasks to queue
+[2025-06-07T16:23:52.234+0000] {logging_mixin.py:188} INFO - [2025-06-07T16:23:52.234+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_producer_dag.py
+[2025-06-07T16:23:52.249+0000] {processor.py:840} INFO - DAG(s) 'kafka_producer_dag' retrieved from /opt/airflow/dags/kafka_producer_dag.py
+[2025-06-07T16:23:52.265+0000] {logging_mixin.py:188} INFO - [2025-06-07T16:23:52.265+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-07T16:23:52.272+0000] {logging_mixin.py:188} INFO - [2025-06-07T16:23:52.272+0000] {dag.py:3954} INFO - Setting next_dagrun for kafka_producer_dag to None, run_after=None
+[2025-06-07T16:23:52.282+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/kafka_producer_dag.py took 0.056 seconds
+[2025-06-07T16:24:22.525+0000] {processor.py:161} INFO - Started process (PID=1137) to work on /opt/airflow/dags/kafka_producer_dag.py
+[2025-06-07T16:24:22.526+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/kafka_producer_dag.py for tasks to queue
+[2025-06-07T16:24:22.527+0000] {logging_mixin.py:188} INFO - [2025-06-07T16:24:22.527+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_producer_dag.py
+[2025-06-07T16:24:22.537+0000] {processor.py:840} INFO - DAG(s) 'kafka_producer_dag' retrieved from /opt/airflow/dags/kafka_producer_dag.py
+[2025-06-07T16:24:22.558+0000] {logging_mixin.py:188} INFO - [2025-06-07T16:24:22.558+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-07T16:24:22.566+0000] {logging_mixin.py:188} INFO - [2025-06-07T16:24:22.566+0000] {dag.py:3954} INFO - Setting next_dagrun for kafka_producer_dag to None, run_after=None
+[2025-06-07T16:24:22.580+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/kafka_producer_dag.py took 0.060 seconds
+[2025-06-07T16:24:52.837+0000] {processor.py:161} INFO - Started process (PID=1147) to work on /opt/airflow/dags/kafka_producer_dag.py
+[2025-06-07T16:24:52.838+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/kafka_producer_dag.py for tasks to queue
+[2025-06-07T16:24:52.839+0000] {logging_mixin.py:188} INFO - [2025-06-07T16:24:52.839+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_producer_dag.py
+[2025-06-07T16:24:52.855+0000] {processor.py:840} INFO - DAG(s) 'kafka_producer_dag' retrieved from /opt/airflow/dags/kafka_producer_dag.py
+[2025-06-07T16:24:52.871+0000] {logging_mixin.py:188} INFO - [2025-06-07T16:24:52.871+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-07T16:24:52.879+0000] {logging_mixin.py:188} INFO - [2025-06-07T16:24:52.879+0000] {dag.py:3954} INFO - Setting next_dagrun for kafka_producer_dag to None, run_after=None
+[2025-06-07T16:24:52.893+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/kafka_producer_dag.py took 0.060 seconds
+[2025-06-07T16:25:23.069+0000] {processor.py:161} INFO - Started process (PID=1163) to work on /opt/airflow/dags/kafka_producer_dag.py
+[2025-06-07T16:25:23.069+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/kafka_producer_dag.py for tasks to queue
+[2025-06-07T16:25:23.070+0000] {logging_mixin.py:188} INFO - [2025-06-07T16:25:23.070+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_producer_dag.py
+[2025-06-07T16:25:23.081+0000] {processor.py:840} INFO - DAG(s) 'kafka_producer_dag' retrieved from /opt/airflow/dags/kafka_producer_dag.py
+[2025-06-07T16:25:23.098+0000] {logging_mixin.py:188} INFO - [2025-06-07T16:25:23.098+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-07T16:25:23.105+0000] {logging_mixin.py:188} INFO - [2025-06-07T16:25:23.105+0000] {dag.py:3954} INFO - Setting next_dagrun for kafka_producer_dag to None, run_after=None
+[2025-06-07T16:25:23.117+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/kafka_producer_dag.py took 0.053 seconds
+[2025-06-07T16:25:53.355+0000] {processor.py:161} INFO - Started process (PID=1173) to work on /opt/airflow/dags/kafka_producer_dag.py
+[2025-06-07T16:25:53.355+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/kafka_producer_dag.py for tasks to queue
+[2025-06-07T16:25:53.357+0000] {logging_mixin.py:188} INFO - [2025-06-07T16:25:53.356+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_producer_dag.py
+[2025-06-07T16:25:53.367+0000] {processor.py:840} INFO - DAG(s) 'kafka_producer_dag' retrieved from /opt/airflow/dags/kafka_producer_dag.py
+[2025-06-07T16:25:53.383+0000] {logging_mixin.py:188} INFO - [2025-06-07T16:25:53.383+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-07T16:25:53.389+0000] {logging_mixin.py:188} INFO - [2025-06-07T16:25:53.389+0000] {dag.py:3954} INFO - Setting next_dagrun for kafka_producer_dag to None, run_after=None
+[2025-06-07T16:25:53.399+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/kafka_producer_dag.py took 0.048 seconds
+[2025-06-07T16:26:23.647+0000] {processor.py:161} INFO - Started process (PID=1189) to work on /opt/airflow/dags/kafka_producer_dag.py
+[2025-06-07T16:26:23.647+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/kafka_producer_dag.py for tasks to queue
+[2025-06-07T16:26:23.649+0000] {logging_mixin.py:188} INFO - [2025-06-07T16:26:23.648+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_producer_dag.py
+[2025-06-07T16:26:23.661+0000] {processor.py:840} INFO - DAG(s) 'kafka_producer_dag' retrieved from /opt/airflow/dags/kafka_producer_dag.py
+[2025-06-07T16:26:23.678+0000] {logging_mixin.py:188} INFO - [2025-06-07T16:26:23.678+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-07T16:26:23.685+0000] {logging_mixin.py:188} INFO - [2025-06-07T16:26:23.685+0000] {dag.py:3954} INFO - Setting next_dagrun for kafka_producer_dag to None, run_after=None
+[2025-06-07T16:26:23.697+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/kafka_producer_dag.py took 0.054 seconds
+[2025-06-07T16:26:53.912+0000] {processor.py:161} INFO - Started process (PID=1199) to work on /opt/airflow/dags/kafka_producer_dag.py
+[2025-06-07T16:26:53.913+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/kafka_producer_dag.py for tasks to queue
+[2025-06-07T16:26:53.915+0000] {logging_mixin.py:188} INFO - [2025-06-07T16:26:53.914+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_producer_dag.py
+[2025-06-07T16:26:53.927+0000] {processor.py:840} INFO - DAG(s) 'kafka_producer_dag' retrieved from /opt/airflow/dags/kafka_producer_dag.py
+[2025-06-07T16:26:53.949+0000] {logging_mixin.py:188} INFO - [2025-06-07T16:26:53.948+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-07T16:26:53.957+0000] {logging_mixin.py:188} INFO - [2025-06-07T16:26:53.957+0000] {dag.py:3954} INFO - Setting next_dagrun for kafka_producer_dag to None, run_after=None
+[2025-06-07T16:26:53.971+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/kafka_producer_dag.py took 0.063 seconds
