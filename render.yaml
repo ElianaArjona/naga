@@ -32,7 +32,7 @@ services:
   # CLICKHOUSE CONSUMER
   - type: worker
     name: clickhouse-consumer
-    env: docker
+    env: docker-image
     dockerfilePath: clickhouse_consumer/Dockerfile
     buildCommand: ""
     startCommand: "python consumer.py"
