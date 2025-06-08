@@ -13,7 +13,7 @@ from psycopg2.extensions import connection
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-# Configuration (read from env for production-grade code)
+# Configuration (from environment)
 KAFKA_BROKER = os.getenv("KAFKA_BROKER", "kafka:9092")
 KAFKA_TOPIC = os.getenv("KAFKA_TOPIC", "ethereum-blocks")
 POSTGRES_HOST = os.getenv("POSTGRES_HOST", "postgres")

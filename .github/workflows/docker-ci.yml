@@ -17,7 +17,7 @@ jobs:
 
     env:
       DOCKER_COMPOSE_PATH: .
-      PYTHON_CODE_DIRS: "airflow postgres_consumer clickhouse_consumer"
+      PYTHON_CODE_DIRS: "dags postgres_consumer clickhouse_consumer"
 
     steps:
       - name: Checkout code
