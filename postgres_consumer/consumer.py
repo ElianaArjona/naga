@@ -1,72 +1,113 @@
+from __future__ import annotations
+
 import json
-import psycopg2
-from confluent_kafka import Consumer
+import logging
+import os
 import time
 
-# Kafka Consumer config
-def wait_for_kafka():
+from confluent_kafka import Consumer
+import psycopg2
+from psycopg2.extensions import connection
+
+# Logging
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
+
+# Configuration (read from env for production-grade code)
+KAFKA_BROKER = os.getenv("KAFKA_BROKER", "kafka:9092")
+KAFKA_TOPIC = os.getenv("KAFKA_TOPIC", "ethereum-blocks")
+POSTGRES_HOST = os.getenv("POSTGRES_HOST", "postgres")
+POSTGRES_DB = os.getenv("POSTGRES_DB", "airflow")
+POSTGRES_USER = os.getenv("POSTGRES_USER", "airflow")
+POSTGRES_PASSWORD = os.getenv("POSTGRES_PASSWORD", "airflow")
+
+
+def wait_for_postgres() -> connection:
     while True:
         try:
-            kafka_conf = {
-                'bootstrap.servers': 'kafka:9092',
-                'group.id': 'postgres-consumer-group',
-                'auto.offset.reset': 'earliest'
-            }
-            consumer = Consumer(kafka_conf)
-            print("Connected to Kafka!")
-            return consumer
-        except Exception:
-            print("Kafka not ready yet, retrying...")
-            time.sleep(3)
-
-consumer = wait_for_kafka()
-consumer.subscribe(['pokemon-data-by-type'])
-
-# Postgres connection
-def wait_for_postgres():
-    while True:
-        try:
-            pg_conn = psycopg2.connect(
-                host='postgres',
-                dbname='airflow',
-                user='airflow',
-                password='airflow'
+            conn = psycopg2.connect(
+                host=POSTGRES_HOST,
+                dbname=POSTGRES_DB,
+                user=POSTGRES_USER,
+                password=POSTGRES_PASSWORD,
             )
-            print("Connected to Postgres!")
-            return pg_conn
-        except psycopg2.OperationalError:
-            print("Postgres not ready yet, retrying...")
+            logger.info("Connected to Postgres")
+            return conn
+        except Exception as e:
+            logger.warning(f"Waiting for Postgres... {e}")
             time.sleep(3)
 
-pg_conn = wait_for_postgres()
-cursor = pg_conn.cursor()
 
-# Create table if not exists
-cursor.execute("""
-    CREATE TABLE IF NOT EXISTS pokemon_data (
-        name TEXT,
-        type TEXT
-    )
-""")
-pg_conn.commit()
+def wait_for_kafka() -> Consumer:
+    while True:
+        try:
+            conf = {
+                'bootstrap.servers': KAFKA_BROKER,
+                'group.id': 'postgres-consumer-group',
+                'auto.offset.reset': 'earliest',
+            }
+            consumer = Consumer(conf)
+            logger.info("Connected to Kafka")
+            return consumer
+        except Exception as e:
+            logger.warning(f"Waiting for Kafka... {e}")
+            time.sleep(3)
 
-while True:
-    msg = consumer.poll(1.0)
-    if msg is None:
-        continue
-    if msg.error():
-        print("Consumer error: {}".format(msg.error()))
-        continue
 
-    value = json.loads(msg.value().decode('utf-8'))
-    key = msg.key().decode('utf-8') if msg.key() else None
+def main() -> None:
+    pg_conn = wait_for_postgres()
+    cursor = pg_conn.cursor()
 
-    name = value['name']
-    pokemon_type = key
-
-    cursor.execute("INSERT INTO pokemon_data (name, type) VALUES (%s, %s)", (name, pokemon_type))
+    cursor.execute("""
+        CREATE TABLE IF NOT EXISTS ethereum_blocks (
+            block_number BIGINT PRIMARY KEY,
+            block_hash TEXT,
+            timestamp TIMESTAMP
+        )
+    """)
     pg_conn.commit()
 
-    print(f"Inserted {name} of type {pokemon_type} into Postgres.")
+    consumer = wait_for_kafka()
+    consumer.subscribe([KAFKA_TOPIC])
 
-consumer.close()
+    logger.info("Postgres consumer starting... (version 2025-06-08)")
+
+    while True:
+        msg = consumer.poll(1.0)
+        if msg is None:
+            continue
+        if msg.error():
+            logger.error(f"Kafka error: {msg.error()}")
+            continue
+
+        try:
+            value = json.loads(msg.value().decode('utf-8'))
+            if isinstance(value['number'], str):
+                block_number = int(value['number'], 16)
+                timestamp = int(value['timestamp'], 16)
+            else:
+                block_number = int(value['number'])
+                timestamp = int(value['timestamp'])
+            
+            block_hash = value['hash']
+
+            cursor.execute(
+                """
+                INSERT INTO ethereum_blocks (block_number, block_hash, timestamp)
+                VALUES (%s, %s, to_timestamp(%s))
+                ON CONFLICT (block_number) DO NOTHING
+                """,
+                (block_number, block_hash, timestamp),
+            )
+            pg_conn.commit()
+
+            logger.info(f"Inserted block {block_number}")
+
+        except Exception as e:
+            logger.exception(f"Processing error: {e}")
+
+    consumer.close()
+
+
+if __name__ == "__main__":
+    main()

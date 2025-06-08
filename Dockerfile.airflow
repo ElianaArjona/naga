@@ -1,5 +1,10 @@
 FROM apache/airflow:2.9.0
 
+USER root
+# Install build tools required for lru-dict compilation
+RUN apt-get update && apt-get install -y gcc python3-dev build-essential
+
 USER airflow
 
-RUN pip install --no-cache-dir confluent-kafka requests clickhouse-connect psycopg2-binary
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
