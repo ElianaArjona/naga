@@ -42,8 +42,9 @@ services:
   # KAFKA
   - type: worker
     name: kafka
-    env: docker
-    image: confluentinc/cp-kafka:7.6.0
+    env: docker-image
+    image: 
+     url: confluentinc/cp-kafka:7.6.0
     plan: starter
     disk:
       name: kafka-data
@@ -65,8 +66,9 @@ services:
   # ZOOKEEPER
   - type: worker
     name: zookeeper
-    env: docker
-    image: confluentinc/cp-zookeeper:7.6.0
+    env: docker-image
+    image: 
+     url: confluentinc/cp-zookeeper:7.6.0
     plan: starter
     disk:
       name: zookeeper-data
@@ -80,8 +82,9 @@ services:
   # CLICKHOUSE
   - type: worker
     name: clickhouse
-    env: docker
-    image: clickhouse/clickhouse-server:latest
+    env: docker-image
+    image: 
+      url: clickhouse/clickhouse-server:latest
     plan: starter
     disk:
       name: clickhouse-data
