@@ -32,6 +32,7 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
+          pip install black flake8 mypy  # Aseguramos que black esté disponible
 
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v2
@@ -62,4 +63,11 @@ jobs:
           for dir in ${{ env.PYTHON_CODE_DIRS }}; do
             echo "Running flake8 on $dir..."
             flake8 "$dir"
+          done
+
+      - name: Run Black Formatting Check
+        run: |
+          for dir in ${{ env.PYTHON_CODE_DIRS }}; do
+            echo "Running black on $dir..."
+            black --check "$dir"
           done

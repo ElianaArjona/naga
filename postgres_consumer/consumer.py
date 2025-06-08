@@ -42,9 +42,9 @@ def wait_for_kafka() -> Consumer:
     while True:
         try:
             conf = {
-                'bootstrap.servers': KAFKA_BROKER,
-                'group.id': 'postgres-consumer-group',
-                'auto.offset.reset': 'earliest',
+                "bootstrap.servers": KAFKA_BROKER,
+                "group.id": "postgres-consumer-group",
+                "auto.offset.reset": "earliest",
             }
             consumer = Consumer(conf)
             logger.info("Connected to Kafka")
@@ -58,13 +58,15 @@ def main() -> None:
     pg_conn = wait_for_postgres()
     cursor = pg_conn.cursor()
 
-    cursor.execute("""
+    cursor.execute(
+        """
         CREATE TABLE IF NOT EXISTS ethereum_blocks (
             block_number BIGINT PRIMARY KEY,
             block_hash TEXT,
             timestamp TIMESTAMP
         )
-    """)
+    """
+    )
     pg_conn.commit()
 
     consumer = wait_for_kafka()
@@ -81,15 +83,15 @@ def main() -> None:
             continue
 
         try:
-            value = json.loads(msg.value().decode('utf-8'))
-            if isinstance(value['number'], str):
-                block_number = int(value['number'], 16)
-                timestamp = int(value['timestamp'], 16)
+            value = json.loads(msg.value().decode("utf-8"))
+            if isinstance(value["number"], str):
+                block_number = int(value["number"], 16)
+                timestamp = int(value["timestamp"], 16)
             else:
-                block_number = int(value['number'])
-                timestamp = int(value['timestamp'])
-            
-            block_hash = value['hash']
+                block_number = int(value["number"])
+                timestamp = int(value["timestamp"])
+
+            block_hash = value["hash"]
 
             cursor.execute(
                 """

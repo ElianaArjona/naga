@@ -21,14 +21,14 @@ CLICKHOUSE_USER = os.getenv("CLICKHOUSE_USER", "default")
 CLICKHOUSE_PASSWORD = os.getenv("CLICKHOUSE_PASSWORD", "admin")
 
 
-def wait_for_clickhouse() -> clickhouse_connect.Client:
+def wait_for_clickhouse() -> clickhouse_connect.Client:  # type: ignore
     while True:
         try:
             client = clickhouse_connect.get_client(
                 host=CLICKHOUSE_HOST,
                 port=CLICKHOUSE_PORT,
                 username=CLICKHOUSE_USER,
-                password=CLICKHOUSE_PASSWORD
+                password=CLICKHOUSE_PASSWORD,
             )
             client.ping()
             logger.info("Connected to ClickHouse")
@@ -42,9 +42,9 @@ def wait_for_kafka() -> Consumer:
     while True:
         try:
             conf = {
-                'bootstrap.servers': KAFKA_BROKER,
-                'group.id': 'clickhouse-consumer-group',
-                'auto.offset.reset': 'earliest',
+                "bootstrap.servers": KAFKA_BROKER,
+                "group.id": "clickhouse-consumer-group",
+                "auto.offset.reset": "earliest",
             }
             consumer = Consumer(conf)
             logger.info("Connected to Kafka")
@@ -57,14 +57,16 @@ def wait_for_kafka() -> Consumer:
 def main() -> None:
     client = wait_for_clickhouse()
 
-    client.command("""
+    client.command(
+        """
         CREATE TABLE IF NOT EXISTS ethereum_blocks (
             block_number UInt64,
             block_hash String,
             timestamp DateTime
         ) ENGINE = MergeTree()
         ORDER BY block_number
-    """)
+    """
+    )
 
     consumer = wait_for_kafka()
     consumer.subscribe([KAFKA_TOPIC])
@@ -79,22 +81,20 @@ def main() -> None:
             continue
 
         try:
-            value = json.loads(msg.value().decode('utf-8'))
-            if isinstance(value['number'], str):
-                block_number = int(value['number'], 16)
-                timestamp = int(value['timestamp'], 16)
+            value = json.loads(msg.value().decode("utf-8"))
+            if isinstance(value["number"], str):
+                block_number = int(value["number"], 16)
+                timestamp = int(value["timestamp"], 16)
             else:
-                block_number = int(value['number'])
-                timestamp = int(value['timestamp'])
+                block_number = int(value["number"])
+                timestamp = int(value["timestamp"])
 
-            block_hash = value['hash']
-
-            
+            block_hash = value["hash"]
 
             client.insert(
-                'ethereum_blocks',
+                "ethereum_blocks",
                 [(block_number, block_hash, timestamp)],
-                column_names=['block_number', 'block_hash', 'timestamp']
+                column_names=["block_number", "block_hash", "timestamp"],
             )
 
             logger.info(f"Inserted block {block_number} into ClickHouse")
