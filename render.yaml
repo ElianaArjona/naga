@@ -40,13 +40,13 @@ services:
     name: kafka
     env: docker-image
     image:
-      url: docker.io/confluentinc/cp-kafka:7.6.0
+      url: confluentinc/cp-kafka:7.6.0
+    startCommand: "/etc/confluent/docker/run"
     plan: starter
     disk:
       name: kafka-data
       sizeGB: 5
-      mountPath: /bitnami/kafka
-    startCommand: "/etc/confluent/docker/run"
+      mountPath: /var/lib/kafka/data
     envVars:
       - key: KAFKA_BROKER_ID
         value: "1"
@@ -66,13 +66,13 @@ services:
     name: zookeeper
     env: docker-image
     image:
-      url: docker.io/confluentinc/cp-zookeeper:7.6.0
+      url: confluentinc/cp-zookeeper:7.6.0
+    startCommand: "/etc/confluent/docker/run"
     plan: starter
     disk:
       name: zookeeper-data
       sizeGB: 1
-      mountPath: /bitnami/zookeeper
-    startCommand: "/etc/confluent/docker/run"
+      mountPath: /var/lib/zookeeper
     envVars:
       - key: ZOOKEEPER_CLIENT_PORT
         value: "2181"
@@ -84,13 +84,13 @@ services:
     name: clickhouse
     env: docker-image
     image:
-      url: docker.io/clickhouse/clickhouse-server:latest
+      url: clickhouse/clickhouse-server:latest
+    startCommand: "/entrypoint.sh"
     plan: starter
     disk:
       name: clickhouse-data
       sizeGB: 5
       mountPath: /var/lib/clickhouse
-    startCommand: "/entrypoint.sh"
     envVars:
       - key: CLICKHOUSE_USER
         value: default
