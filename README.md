@@ -1,226 +1,222 @@
-# 🐙 Naga Project — Streaming Data Pipeline with Airflow, Kafka, ClickHouse & PostgreSQL
+
+# 🧪 Ethereum Blockchain Streaming Pipeline (Initial Version)
+
+This project is an end-to-end data pipeline that streams live Ethereum blockchain data into Kafka and stores it into both PostgreSQL and ClickHouse for further analysis.
+
+It uses:
+
+- **Airflow**: Orchestrates the data ingestion
+- **Kafka**: Acts as streaming data broker
+- **Postgres**: Stores data for OLTP-style queries
+- **ClickHouse**: Stores data for analytical queries
+- **Docker Compose**: Containerizes the entire stack
+- **Web3.py**: Connects to Ethereum blockchain
+- **Alchemy RPC**: Provides blockchain node access
 
 ---
 
-## 🧭 Project Overview
+## ⚙️ Architecture
 
-**Naga** is a modern, highly scalable streaming data pipeline architecture designed to process, transform, and store real-time data at scale. This project integrates multiple distributed systems following a microservices approach, orchestrated with Docker and deployed serverlessly on Render.
-
----
-
-## 🔥 Key Components
-
-- **Apache Airflow** — Workflow orchestration and DAG scheduling.
-- **Apache Kafka** — Real-time event streaming platform and distributed message broker.
-- **ClickHouse** — Column-oriented OLAP database for high-performance analytical queries.
-- **PostgreSQL** — Relational database for transactional data and Airflow metadata.
-- **Python Kafka Consumers** — Services that consume streaming data and write into PostgreSQL and ClickHouse.
-- **Docker Compose** — Complete local development stack.
-- **Render** — Fully managed serverless cloud deployment.
-
----
-
-## 🌐 High-Level Architecture
-
-```text
-+----------------+      +--------------+      +-----------------+
-|  API Producer  | ---> |    Kafka     | ---> |  Kafka Consumers |
-+----------------+      +--------------+      +-----------------+
-                                                  |           |
-                                               +--+--+     +--+--+
-                                               |Postgres|  |ClickHouse|
-                                               +-------+   +--------+
+```
+Ethereum Blockchain --> Web3.py (via Airflow DAG)
+         |
+         v
+      Kafka (topic: ethereum-blocks)
+         |
+         v
+   Kafka Consumers
+     /        \
+Postgres    ClickHouse
 ```
 
-- **Producers:** Airflow DAGs collect external data sources (e.g. Star Wars API, Pokémon API), stream data into Kafka topics.
-- **Consumers:** Python microservices consume Kafka topics and write transformed data into PostgreSQL and ClickHouse for storage and analytics.
-- **Storage:** PostgreSQL for structured transactional data, ClickHouse for analytics.
+---
+
+## 🚀 Components Overview
+
+### 1️⃣ Airflow DAG
+
+- Located inside `dags/ethereum_block_producer_dag.py`.
+- Fetches the latest Ethereum block every minute.
+- Publishes the full block data to Kafka (`ethereum-blocks` topic).
+- Uses environment variables:
+  - `ALCHEMY_API_KEY`: Your Alchemy access token.
+  - `KAFKA_BROKER`: Kafka connection string.
+
+### 2️⃣ Kafka
+
+- Kafka broker runs inside Docker.
+- Kafka topic used: `ethereum-blocks`.
+- Topic is created manually using Kafka CLI inside docker.
+
+### 3️⃣ PostgreSQL Consumer
+
+- Consumes messages from Kafka.
+- Extracts `block_number`, `block_hash`, `timestamp`.
+- Stores them into `ethereum_blocks` table in Postgres.
+
+### 4️⃣ ClickHouse Consumer
+
+- Similar to Postgres consumer.
+- Consumes from Kafka.
+- Stores data into ClickHouse table `ethereum_blocks`.
 
 ---
 
-## 🚀 Deployment Modes
+## 🐳 Docker Compose Setup
 
-- ✅ **Local Development:** Docker Compose powered full-stack for local development.
-- ✅ **Production Deployment:** Fully serverless Render deployment using Render Blueprints (`render.yaml`).
+All services are containerized:
+
+- `airflow-webserver`
+- `airflow-scheduler`
+- `kafka`
+- `zookeeper`
+- `postgres`
+- `clickhouse`
+- `postgres-consumer`
+- `clickhouse-consumer`
+- (Optional) `kafka-tools` for Kafka CLI
 
 ---
 
-## 🐳 Local Development Setup
+## 🏗️ Usage Instructions
 
-### ✅ Prerequisites
-
-- Docker installed
-- Docker Compose installed
-- Python 3.12 installed (optional for local scripts)
-
-### ✅ Clone and Launch
+### 1️⃣ Clone the repository
 
 ```bash
-git clone https://github.com/YOUR-ORG/naga.git
-cd naga
-docker-compose up --build
+git clone <repo-url>
+cd project-folder
 ```
 
-This will launch:
+### 2️⃣ Setup `.env` file
 
-- Airflow Webserver (http://localhost:8080)
-- Airflow Scheduler
-- Kafka Broker
-- Zookeeper
-- ClickHouse DB
-- PostgreSQL DB
-- Kafka Consumers (Postgres & ClickHouse)
+Create `.env` file in project root with:
 
----
+```env
+# PostgreSQL
+POSTGRES_USER=airflow
+POSTGRES_PASSWORD=airflow
+POSTGRES_DB=airflow
 
-## 📂 Local Development File Structure
+# ClickHouse
+CLICKHOUSE_DB=default
+CLICKHOUSE_USER=default
+CLICKHOUSE_PASSWORD=admin
 
-```text
-naga/
-│
-├── dags/                    # Airflow DAGs
-├── docker-compose.yml       # Local Docker Compose definition
-├── Dockerfile.airflow       # Custom Airflow Docker build
-│
-├── postgres_consumer/       # Postgres Kafka consumer microservice
-│   ├── Dockerfile
-│   └── consumer.py
-│
-├── clickhouse_consumer/     # ClickHouse Kafka consumer microservice
-│   ├── Dockerfile
-│   └── consumer.py
-│
-└── render.yaml              # Render cloud deployment blueprint
+# Airflow DB connection
+AIRFLOW__CORE__SQL_ALCHEMY_CONN=postgresql+psycopg2://airflow:airflow@postgres:5432/airflow
+
+# Airflow security key
+AIRFLOW__CORE__FERNET_KEY=your_fernet_key
+
+# Blockchain RPC Access
+ALCHEMY_API_KEY=your_alchemy_api_key
 ```
 
 ---
 
-## 🚀 Cloud Deployment on Render
+### 3️⃣ Build & start containers
 
-This project leverages **Render Blueprints** to fully automate infrastructure deployment via the `render.yaml` file.
-
-### ✅ Render Deployment Steps
-
-1️⃣ **Connect your GitHub repo to Render**
-
-2️⃣ In Render, select **Blueprint Deploy** and pick your branch.
-
-3️⃣ Render will automatically deploy:
-
-- Airflow Webserver (Web service)
-- Airflow Scheduler (Worker)
-- Postgres Consumer (Worker)
-- ClickHouse Consumer (Worker)
-- Kafka (Worker using public Docker image)
-- Zookeeper (Worker using public Docker image)
-- ClickHouse (Worker using public Docker image)
-
-4️⃣ ✅ Create Managed PostgreSQL instance via Render UI:
-- Database Name: `airflow`
-- Username: `airflow`
-- Password: `airflow` (or a strong password)
-- Internal Hostname: e.g. `postgres-db:5432` for Render DNS
-
-5️⃣ ✅ Create Environment Group (`.env`) in Render with the following environment variables:
-
-| Variable | Value |
-|----------|-------|
-| POSTGRES_USER | airflow |
-| POSTGRES_PASSWORD | airflow |
-| POSTGRES_DB | airflow |
-| CLICKHOUSE_DB | default |
-| CLICKHOUSE_USER | default |
-| CLICKHOUSE_PASSWORD | admin |
-| KAFKA_BROKER_ID | 1 |
-| AIRFLOW_USER | admin |
-| AIRFLOW_PASSWORD | admin |
-| AIRFLOW_EMAIL | admin@example.com |
-| AIRFLOW__CORE__FERNET_KEY | (generate one: `python -c "from cryptography.fernet import Fernet; print(Fernet.generate_key().decode())"`) |
-| AIRFLOW__CORE__SQL_ALCHEMY_CONN | postgresql+psycopg2://airflow:airflow@postgres-db:5432/airflow |
+```bash
+docker compose up --build -d
+```
 
 ---
 
-## ⚙️ Docker Build Contexts Summary
+### 4️⃣ Create Kafka Topic
 
-| Service | Build Context | Dockerfile |
-|---------|----------------|------------|
-| Airflow Webserver | `./` | `Dockerfile.airflow` |
-| Airflow Scheduler | `./` | `Dockerfile.airflow` |
-| Postgres Consumer | `./postgres_consumer/` | `Dockerfile` |
-| ClickHouse Consumer | `./clickhouse_consumer/` | `Dockerfile` |
+Enter Kafka CLI container:
 
----
+```bash
+docker compose exec kafka bash
+```
 
-## 📡 Render Internal DNS Communication
+Create topic:
 
-| Service | Internal DNS |
-|---------|---------------|
-| Kafka | `kafka:9092` |
-| Zookeeper | `zookeeper:2181` |
-| ClickHouse | `clickhouse:8123` |
-| Postgres | `postgres-db:5432` |
-
-Render manages DNS resolution automatically between services.
+```bash
+kafka-topics --bootstrap-server kafka:9092 --create --topic ethereum-blocks --partitions 1 --replication-factor 1
+```
 
 ---
 
-## 🏗 render.yaml Summary
+### 5️⃣ Access Airflow
 
-The `render.yaml` defines full infrastructure-as-code deployment:
+Open: [http://localhost:8080](http://localhost:8080)
 
-- ✅ 1x Web Service (Airflow Webserver)
-- ✅ 6x Workers (Scheduler, Consumers, Kafka, Zookeeper, ClickHouse)
+Login credentials (default):
 
-All services are independently scalable and isolated.
+- user: `admin`
+- pass: `admin` (or whatever you defined)
 
----
-
-## 🧪 Testing Kafka Consumers
-
-- Data is pushed into Kafka topics:
-  - `pokemon-data`
-  - `pokemon-data-by-type`
-- Kafka consumers automatically consume, transform and write data into:
-  - PostgreSQL
-  - ClickHouse
-
-You can manually trigger DAGs in Airflow UI for data ingestion.
+Trigger the `ethereum_block_producer` DAG manually.
 
 ---
 
-## 🏷 Design Goals
+### 6️⃣ Check consumers are working
 
-- Fully event-driven
-- Microservices architecture
-- Streaming-first design
-- Stateless deployment (except data layers)
-- Cloud-native & scalable
-- Serverless Render deployment (no dedicated DevOps needed)
+- Consumers automatically subscribe to `ethereum-blocks`.
+- Logs can be checked via:
 
----
-
-## ⚠️ Known Limitations
-
-- Kafka partitioning is managed in producer logic based on Pokémon type.
-- Managed PostgreSQL must be manually provisioned in Render UI.
-- Proper resource sizing depends on production data load.
-- Internal DNS names must be used between services.
+```bash
+docker compose logs clickhouse-consumer
+docker compose logs postgres-consumer
+```
 
 ---
 
-## 🚀 CI/CD Deployment Flow
+### 7️⃣ Query data
 
-- ✅ All deployment is automated through Render Blueprints.
-- ✅ Any commit to the repo auto-triggers new deployments.
-- ✅ Secrets and configurations are securely managed via Render Environment Groups.
+**Postgres**
+
+```bash
+docker compose exec postgres psql -U airflow -d airflow
+
+SELECT * FROM ethereum_blocks;
+```
+
+**ClickHouse**
+
+```bash
+docker compose exec clickhouse clickhouse-client
+
+SELECT * FROM ethereum_blocks;
+```
 
 ---
 
-## 📄 License
+## 🐞 Common Issues
 
-This project is licensed for educational & prototyping purposes.
+| Problem | Solution |
+|---------|----------|
+| Kafka DNS errors | Always use container names (e.g., `kafka:9092`) as brokers inside Docker network |
+| Stale consumer code | Use `docker compose build --no-cache` |
+| Airflow scheduler down | Restart `docker compose restart airflow-scheduler` |
+| Kafka tools not available | Use dedicated `kafka-tools` container |
 
 ---
 
-**Enjoy your fully distributed streaming microservices pipeline — cloud-native and fully serverless. 🚀**
+## 📦 TODO (for full production pipeline)
 
+- [ ] Schema validation (pydantic or Avro)
+- [ ] Partition strategy improvement
+- [ ] Idempotency (upserts)
+- [ ] Batching support for backfills
+- [ ] Observability metrics
+- [ ] Prometheus/Grafana integration
+
+---
+
+## 📌 Author's Note
+
+This project is intentionally built as part of **Blockchain Data Engineering interview preparation**, demonstrating:
+
+- Streaming pipeline architecture
+- ETL orchestration via Airflow
+- Kafka broker integration
+- Consuming and processing blockchain data using Web3.py
+- Real-life debugging experience with Dockerized pipelines
+
+---
+
+✅ ✅ ✅
+
+# ✅ Next step: Upgrade to "Senior Interview Version"
