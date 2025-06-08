@@ -32,7 +32,7 @@ services:
   # CLICKHOUSE CONSUMER
   - type: worker
     name: clickhouse-consumer
-    env: docker-image
+    env: docker
     dockerfilePath: clickhouse_consumer/Dockerfile
     buildCommand: ""
     startCommand: "python consumer.py"
@@ -42,7 +42,7 @@ services:
   # KAFKA
   - type: worker
     name: kafka
-    env: docker-image
+    env: docker
     image: confluentinc/cp-kafka:7.6.0
     plan: starter
     disk:
@@ -65,7 +65,7 @@ services:
   # ZOOKEEPER
   - type: worker
     name: zookeeper
-    env: docker-image
+    env: docker
     image: confluentinc/cp-zookeeper:7.6.0
     plan: starter
     disk:
@@ -80,7 +80,7 @@ services:
   # CLICKHOUSE
   - type: worker
     name: clickhouse
-    env: docker-image
+    env: docker
     image: clickhouse/clickhouse-server:latest
     plan: starter
     disk:
