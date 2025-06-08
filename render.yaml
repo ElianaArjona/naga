@@ -5,7 +5,6 @@ services:
     env: docker
     dockerfilePath: Dockerfile.airflow
     buildCommand: ""
-    startCommand: "airflow webserver"
     envVars:
       - fromGroup: global-env
 
@@ -15,7 +14,6 @@ services:
     env: docker
     dockerfilePath: Dockerfile.airflow
     buildCommand: ""
-    startCommand: "airflow scheduler"
     envVars:
       - fromGroup: global-env
 
@@ -25,7 +23,6 @@ services:
     env: docker
     dockerfilePath: postgres_consumer/Dockerfile
     buildCommand: ""
-    startCommand: "python consumer.py"
     envVars:
       - fromGroup: global-env
 
@@ -35,7 +32,6 @@ services:
     env: docker
     dockerfilePath: clickhouse_consumer/Dockerfile
     buildCommand: ""
-    startCommand: "python consumer.py"
     envVars:
       - fromGroup: global-env
 
@@ -43,15 +39,17 @@ services:
   - type: worker
     name: kafka
     env: docker-image
-    image: 
-     url: confluentinc/cp-kafka:7.6.0
+    image:
+      url: docker.io/confluentinc/cp-kafka:7.6.0
     plan: starter
     disk:
       name: kafka-data
       sizeGB: 5
+      mountPath: /bitnami/kafka
+    startCommand: "/etc/confluent/docker/run"
     envVars:
       - key: KAFKA_BROKER_ID
-        value: 1
+        value: "1"
       - key: KAFKA_ZOOKEEPER_CONNECT
         value: zookeeper:2181
       - key: KAFKA_ADVERTISED_LISTENERS
@@ -61,34 +59,38 @@ services:
       - key: KAFKA_INTER_BROKER_LISTENER_NAME
         value: PLAINTEXT
       - key: KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR
-        value: 1
+        value: "1"
 
   # ZOOKEEPER
   - type: worker
     name: zookeeper
     env: docker-image
-    image: 
-     url: confluentinc/cp-zookeeper:7.6.0
+    image:
+      url: docker.io/confluentinc/cp-zookeeper:7.6.0
     plan: starter
     disk:
       name: zookeeper-data
       sizeGB: 1
+      mountPath: /bitnami/zookeeper
+    startCommand: "/etc/confluent/docker/run"
     envVars:
       - key: ZOOKEEPER_CLIENT_PORT
-        value: 2181
+        value: "2181"
       - key: ZOOKEEPER_TICK_TIME
-        value: 2000
+        value: "2000"
 
   # CLICKHOUSE
   - type: worker
     name: clickhouse
     env: docker-image
-    image: 
-      url: clickhouse/clickhouse-server:latest
+    image:
+      url: docker.io/clickhouse/clickhouse-server:latest
     plan: starter
     disk:
       name: clickhouse-data
       sizeGB: 5
+      mountPath: /var/lib/clickhouse
+    startCommand: "/entrypoint.sh"
     envVars:
       - key: CLICKHOUSE_USER
         value: default
