@@ -1,0 +1,6 @@
+#Env Folder and Files
+.venv/
+.env
+
+# Airflow logs
+logs/

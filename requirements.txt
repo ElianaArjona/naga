@@ -1,0 +1,7 @@
+confluent-kafka
+requests
+clickhouse-connect
+psycopg2-binary
+web3
+mypy
+flake8

@@ -1,0 +1,143 @@
+version: '3.8'
+
+services:
+
+  zookeeper:
+    image: confluentinc/cp-zookeeper:7.6.0
+    environment:
+      ZOOKEEPER_CLIENT_PORT: 2181
+      ZOOKEEPER_TICK_TIME: 2000
+    volumes:
+      - zookeeper_data:/bitnami
+
+  kafka:
+    image: confluentinc/cp-kafka:7.6.0
+    depends_on:
+      - zookeeper
+    networks:
+      default:
+        aliases:
+          - kafka.internal
+    ports:
+      - "9092:9092"
+    environment:
+      KAFKA_BROKER_ID: 1
+      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:9092
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT
+      KAFKA_INTER_BROKER_LISTENER_NAME: PLAINTEXT
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+    volumes:
+      - kafka_data:/bitnami
+
+  postgres:
+    image: postgres:15
+    restart: always
+    environment:
+      POSTGRES_USER: airflow
+      POSTGRES_PASSWORD: airflow
+      POSTGRES_DB: airflow
+    ports:
+      - "55432:5432"
+
+  clickhouse:
+    image: clickhouse/clickhouse-server:latest
+    environment:
+      CLICKHOUSE_DB: default
+      CLICKHOUSE_USER: default
+      CLICKHOUSE_PASSWORD: admin
+    ports:
+      - "8123:8123"
+      - "9000:9000"
+
+  airflow-webserver:
+    build:
+      context: .
+      dockerfile: Dockerfile.airflow
+    restart: always
+    depends_on:
+      - kafka
+      - postgres
+    environment:
+      AIRFLOW__CORE__EXECUTOR: LocalExecutor
+      AIRFLOW__CORE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres:5432/airflow
+      AIRFLOW__CORE__FERNET_KEY: my-fernet-key
+      AIRFLOW__CORE__LOAD_EXAMPLES: 'false'
+      ETH_RPC_URL: http://eth.llamarpc.com
+      KAFKA_BROKER: kafka:9092
+      KAFKA_TOPIC: ethereum-blocks
+      ALCHEMY_API_KEY: ${ALCHEMY_API_KEY}
+    volumes:
+      - ./dags:/opt/airflow/dags
+      - ./logs:/opt/airflow/logs
+      - ./plugins:/opt/airflow/plugins
+    ports:
+      - "8080:8080"
+    command: >
+      bash -c "
+        airflow db upgrade &&
+        (airflow users create --username admin --firstname Admin --lastname User --role Admin --email admin@example.com --password admin || true) &&
+        airflow webserver"
+
+  airflow-scheduler:
+    build:
+      context: .
+      dockerfile: Dockerfile.airflow
+    restart: always
+    depends_on:
+      - postgres
+      - kafka
+    environment:
+      AIRFLOW__CORE__EXECUTOR: LocalExecutor
+      AIRFLOW__CORE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres:5432/airflow
+      AIRFLOW__CORE__FERNET_KEY: my-fernet-key
+      AIRFLOW__CORE__LOAD_EXAMPLES: 'false'
+      ETH_RPC_URL: http://eth.llamarpc.com
+      KAFKA_BROKER: kafka:9092
+      KAFKA_TOPIC: ethereum-blocks
+      ALCHEMY_API_KEY: ${ALCHEMY_API_KEY}
+    volumes:
+      - ./dags:/opt/airflow/dags
+      - ./logs:/opt/airflow/logs
+      - ./plugins:/opt/airflow/plugins
+    command: scheduler
+
+  postgres-consumer:
+    build:
+      context: ./postgres_consumer
+      dockerfile: Dockerfile
+    depends_on:
+      - kafka
+      - postgres
+    environment:
+      KAFKA_BROKER: kafka:9092
+      KAFKA_TOPIC: ethereum-blocks
+      POSTGRES_HOST: postgres
+      POSTGRES_DB: airflow
+      POSTGRES_USER: airflow
+      POSTGRES_PASSWORD: airflow
+
+  clickhouse-consumer:
+    build:
+      context: ./clickhouse_consumer
+      dockerfile: Dockerfile
+    depends_on:
+      - kafka
+      - clickhouse
+    environment:
+      KAFKA_BROKER: kafka:9092
+      KAFKA_TOPIC: ethereum-blocks
+      CLICKHOUSE_HOST: clickhouse
+      CLICKHOUSE_PORT: 8123
+      CLICKHOUSE_USER: default
+      CLICKHOUSE_PASSWORD: admin
+
+volumes:
+  kafka_data:
+    name: kafka_data
+  zookeeper_data:
+    name: zookeeper_data
+
+networks:
+  default:
+    name: naga_default
