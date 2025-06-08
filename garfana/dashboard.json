@@ -1,0 +1,111 @@
+{
+    "title": "Ethereum Ingestion Pipeline Monitoring",
+    "timezone": "browser",
+    "schemaVersion": 36,
+    "version": 2,
+    "refresh": "30s",
+    "panels": [
+      {
+        "type": "stat",
+        "title": "ClickHouse: Total Messages Consumed",
+        "targets": [
+          {
+            "expr": "messages_consumed_total{job=\"clickhouse-consumer\"}",
+            "refId": "A"
+          }
+        ],
+        "gridPos": { "x": 0, "y": 0, "w": 6, "h": 3 }
+      },
+      {
+        "type": "stat",
+        "title": "Postgres: Total Messages Consumed",
+        "targets": [
+          {
+            "expr": "messages_consumed_total{job=\"postgres-consumer\"}",
+            "refId": "B"
+          }
+        ],
+        "gridPos": { "x": 6, "y": 0, "w": 6, "h": 3 }
+      },
+      {
+        "type": "stat",
+        "title": "ClickHouse: Total Failed Messages",
+        "targets": [
+          {
+            "expr": "messages_failed_total{job=\"clickhouse-consumer\"}",
+            "refId": "C"
+          }
+        ],
+        "gridPos": { "x": 0, "y": 3, "w": 6, "h": 3 }
+      },
+      {
+        "type": "stat",
+        "title": "Postgres: Total Failed Messages",
+        "targets": [
+          {
+            "expr": "messages_failed_total{job=\"postgres-consumer\"}",
+            "refId": "D"
+          }
+        ],
+        "gridPos": { "x": 6, "y": 3, "w": 6, "h": 3 }
+      },
+      {
+        "type": "graph",
+        "title": "Processing Time (Seconds)",
+        "targets": [
+          {
+            "expr": "rate(processing_time_seconds_sum{job=\"clickhouse-consumer\"}[5m])",
+            "refId": "E"
+          },
+          {
+            "expr": "rate(processing_time_seconds_sum{job=\"postgres-consumer\"}[5m])",
+            "refId": "F"
+          }
+        ],
+        "yaxes": [
+          { "format": "s", "label": "Seconds", "logBase": 1, "min": 0, "show": true },
+          { "show": false }
+        ],
+        "gridPos": { "x": 0, "y": 6, "w": 12, "h": 8 }
+      },
+      {
+        "type": "graph",
+        "title": "Batch Size (P50 Quantile)",
+        "targets": [
+          {
+            "expr": "histogram_quantile(0.5, sum(rate(batch_size_bucket{job=\"clickhouse-consumer\"}[5m])) by (le))",
+            "refId": "G"
+          },
+          {
+            "expr": "histogram_quantile(0.5, sum(rate(batch_size_bucket{job=\"postgres-consumer\"}[5m])) by (le))",
+            "refId": "H"
+          }
+        ],
+        "yaxes": [
+          { "format": "short", "label": "Batch Size", "min": 0, "show": true },
+          { "show": false }
+        ],
+        "gridPos": { "x": 12, "y": 6, "w": 12, "h": 8 }
+      },
+      {
+        "type": "graph",
+        "title": "Ingestion Rate (per second)",
+        "targets": [
+          {
+            "expr": "rate(messages_consumed_total{job=\"clickhouse-consumer\"}[5m])",
+            "refId": "I"
+          },
+          {
+            "expr": "rate(messages_consumed_total{job=\"postgres-consumer\"}[5m])",
+            "refId": "J"
+          }
+        ],
+        "yaxes": [
+          { "format": "ops", "label": "msg/sec", "min": 0, "show": true },
+          { "show": false }
+        ],
+        "gridPos": { "x": 0, "y": 14, "w": 24, "h": 8 }
+      }
+    ]
+  }
+  

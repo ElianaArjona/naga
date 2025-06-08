@@ -9,15 +9,15 @@ services:
       ZOOKEEPER_TICK_TIME: 2000
     volumes:
       - zookeeper_data:/bitnami
+    networks:
+      - default
 
   kafka:
     image: confluentinc/cp-kafka:7.6.0
     depends_on:
       - zookeeper
     networks:
-      default:
-        aliases:
-          - kafka.internal
+      - default
     ports:
       - "9092:9092"
     environment:
@@ -30,6 +30,18 @@ services:
     volumes:
       - kafka_data:/bitnami
 
+  kafka-exporter:
+    image: danielqsj/kafka-exporter:latest
+    restart: always
+    ports:
+      - "9308:9308"
+    environment:
+      KAFKA_BROKERS: kafka:9092
+    depends_on:
+      - kafka
+    networks:
+      - default
+
   postgres:
     image: postgres:15
     restart: always
@@ -39,6 +51,8 @@ services:
       POSTGRES_DB: airflow
     ports:
       - "55432:5432"
+    networks:
+      - default
 
   clickhouse:
     image: clickhouse/clickhouse-server:latest
@@ -49,6 +63,8 @@ services:
     ports:
       - "8123:8123"
       - "9000:9000"
+    networks:
+      - default
 
   airflow-webserver:
     build:
@@ -67,10 +83,13 @@ services:
       KAFKA_BROKER: kafka:9092
       KAFKA_TOPIC: ethereum-blocks
       ALCHEMY_API_KEY: ${ALCHEMY_API_KEY}
+      AIRFLOW__CORE__DAGS_FOLDER: /opt/airflow/dags
+      PYTHONPATH: /opt/airflow
     volumes:
       - ./dags:/opt/airflow/dags
       - ./logs:/opt/airflow/logs
       - ./plugins:/opt/airflow/plugins
+      - ./:/opt/airflow
     ports:
       - "8080:8080"
     command: >
@@ -78,6 +97,8 @@ services:
         airflow db upgrade &&
         (airflow users create --username admin --firstname Admin --lastname User --role Admin --email admin@example.com --password admin || true) &&
         airflow webserver"
+    networks:
+      - default
 
   airflow-scheduler:
     build:
@@ -96,11 +117,16 @@ services:
       KAFKA_BROKER: kafka:9092
       KAFKA_TOPIC: ethereum-blocks
       ALCHEMY_API_KEY: ${ALCHEMY_API_KEY}
+      AIRFLOW__CORE__DAGS_FOLDER: /opt/airflow/dags
+      PYTHONPATH: /opt/airflow
     volumes:
       - ./dags:/opt/airflow/dags
       - ./logs:/opt/airflow/logs
       - ./plugins:/opt/airflow/plugins
+      - ./:/opt/airflow
     command: scheduler
+    networks:
+      - default
 
   postgres-consumer:
     build:
@@ -116,6 +142,10 @@ services:
       POSTGRES_DB: airflow
       POSTGRES_USER: airflow
       POSTGRES_PASSWORD: airflow
+    ports:
+      - "8001:8000"
+    networks:
+      - default
 
   clickhouse-consumer:
     build:
@@ -131,6 +161,31 @@ services:
       CLICKHOUSE_PORT: 8123
       CLICKHOUSE_USER: default
       CLICKHOUSE_PASSWORD: admin
+    ports:
+      - "8002:8000"
+    networks:
+      - default
+
+  prometheus:
+    image: prom/prometheus:latest
+    restart: always
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml
+    networks:
+      - default
+    depends_on:
+      - postgres-consumer
+      - clickhouse-consumer
+
+  grafana:
+    image: grafana/grafana:latest
+    restart: always
+    ports:
+      - "3000:3000"
+    networks:
+      - default
 
 volumes:
   kafka_data:

@@ -14,6 +14,8 @@ from confluent_kafka import Producer
 from web3 import Web3, HTTPProvider
 from web3.exceptions import BlockNotFound
 
+from schemas.producer_schema import EthereumBlock  
+
 # Logging setup
 logger = logging.getLogger(__name__)
 logging.basicConfig(level=logging.INFO)
@@ -43,7 +45,6 @@ kafka_topic: str = os.getenv("KAFKA_TOPIC", "ethereum-blocks")
 
 print(f"Using ETH RPC URL: {eth_rpc_url}")
 
-
 def fetch_block_and_push_to_kafka() -> None:
     try:
         provider = HTTPProvider(eth_rpc_url, request_kwargs={"timeout": 10})
@@ -56,15 +57,32 @@ def fetch_block_and_push_to_kafka() -> None:
         latest_block_number: int = web3.eth.block_number
         logger.info(f"Latest block: {latest_block_number}")
 
-        block = web3.eth.get_block(latest_block_number, full_transactions=True)
-        block_data: Dict[str, Any] = dict(block)
+        block = web3.eth.get_block(latest_block_number, full_transactions=False)
 
-        block_json: str = json.dumps(block_data, default=str)
+        # Extract the fields you want to validate
+        logger.info(block)
+        block_data = {
+            "block_number": block.number,
+            "block_hash": block.hash.hex(),
+            "timestamp": block.timestamp,
+            "miner": block.miner,
+            "transactions": len(block.transactions)
+        }
+
+        # Validate via Pydantic
+        validated_block = EthereumBlock(**block_data)
+
+        # Serialize
+        block_json = validated_block.model_dump_json()
 
         producer_conf: Dict[str, str] = {"bootstrap.servers": kafka_broker}
         producer = Producer(producer_conf)
 
-        producer.produce(kafka_topic, value=block_json.encode("utf-8"))
+        producer.produce(
+            kafka_topic,
+            key=str(validated_block.block_number).encode("utf-8"),
+            value=block_json.encode("utf-8")
+        )
         producer.flush()
 
         logger.info(f"Produced block {latest_block_number} to Kafka")
@@ -73,7 +91,6 @@ def fetch_block_and_push_to_kafka() -> None:
         logger.error(f"Block not found: {e}")
     except Exception as e:
         logger.exception(f"Unexpected error: {e}")
-
 
 # Airflow task
 produce_task = PythonOperator(

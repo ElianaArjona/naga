@@ -2,7 +2,7 @@ FROM python:3.12
 
 WORKDIR /app
 
-RUN pip install confluent-kafka psycopg2-binary
+RUN pip install confluent-kafka psycopg2-binary prometheus-client
 
 COPY consumer.py .
 COPY wait-for-it.sh .

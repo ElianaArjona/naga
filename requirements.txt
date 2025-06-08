@@ -5,3 +5,4 @@ psycopg2-binary
 web3
 mypy
 flake8
+prometheus_client
